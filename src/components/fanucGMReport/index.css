@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#chinaMap{
+  position:absolute;
+  left:0px;
+  top:0px;
+  z-index:-1;
+}
+
+#fanucGMReportHeader{
+  position:absolute;
+  left: 5%;
+  top:10%;
+  z-index:999;
+}

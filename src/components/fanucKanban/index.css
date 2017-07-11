@@ -1,0 +1,25 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url('../../img/fanucLayout.png') !important ;
+  background-size:100% !important;
+  background-attachment:fixed !important;
+  background-repeat:no-repeat !important;
+}
+
+.cellLabel{
+  display: inline-block
+}
+
+.custom-image img {
+  display: block;
+}
+.custom-card {
+  padding: 10px 16px;
+}
+.custom-card p {
+  color: #999;
+}
