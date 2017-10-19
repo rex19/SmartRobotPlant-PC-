@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animate.css": "^3.5.2",
     "antd": "^2.8.2",
     "axios": "^0.16.1",
-    "echarts": "^3.5.4",
+    "echarts": "^3.7.1",
+    "echarts-for-react": "^2.0.0",
     "jquery": "^3.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

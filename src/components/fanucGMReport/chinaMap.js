@@ -157,7 +157,8 @@ class ChinaMap extends React.Component {
         myChart = echarts.init(document.getElementById('main'));
 
         const option = {
-            backgroundColor: '#404a59',
+            // backgroundColor: 'rgba(64,74,89,0.9)',
+            // backgroundColor:'#202E4A',
             animation: true,
             animationDuration: 1000,
             animationEasing: 'cubicInOut',
@@ -179,19 +180,21 @@ class ChinaMap extends React.Component {
                 //     // fontFamily:'Times New Roman',
                 //     fontSize: 30
                 // }
-            }, {
-                id: 'statistic',
-                text: '区    域',
-                // left: 'right',
-                right: '47%',
-                top: '10%',
-                // width: 100,
-                textStyle: {
-                    color: '#fff',
-                    fontWeight: 'bolder',
-                    fontSize: 30
-                }
-            }],
+            }
+                // , {
+                //     id: 'statistic',
+                //     text: '区    域',
+                //     // left: 'right',
+                //     right: '47%',
+                //     top: '10%',
+                //     // width: 100,
+                //     textStyle: {
+                //         color: '#fff',
+                //         fontWeight: 'bolder',
+                //         fontSize: 30
+                //     }
+                // }
+            ],
             toolbox: {
                 iconStyle: {
                     normal: {
@@ -239,8 +242,8 @@ class ChinaMap extends React.Component {
                 roam: true,
                 itemStyle: {
                     normal: {
-                        areaColor: '#323c48',
-                        borderColor: '#111'
+                        areaColor: 'rgba(32,46,74,0.6)',
+                        borderColor: '#DBE6E9'
                     },
                     emphasis: {
                         areaColor: '#2a333d'
@@ -528,7 +531,7 @@ class ChinaMap extends React.Component {
 
         return (
             // 1920*1080
-            <div id="main" style={{ width: '100%', height: '1080%' }}>
+            <div id="main" style={{ width: '100%', height: '1080px' }}>
             </div>
         );
     }

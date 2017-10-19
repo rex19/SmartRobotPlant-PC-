@@ -6,6 +6,15 @@ const port = 7001
 const ip = 'dsm.smart-flow.cn'
 const api = 'FANUC/api'
 
+// // 开发环境
+// const port = 80
+// const ip = '172.16.29.188'
+// const api = 'FANUC/api'
+
+// // 开发环境
+// const port = 80
+// const ip = '192.168.1.117'
+// const api = 'FANUC/api'
 
 export default class CRUD {
 
@@ -122,9 +131,25 @@ export default class CRUD {
         return axios.get(`http://` + ip + `:` + port + `/` + api + `/RobotCurrentAlarm/` + Cell, {})
     }
 
-    //查询序列号  带两个参数
-    fanucKanbanAjaxSelectPartSerial(Serial_Part, Pass_No) {
+    //查询序列号  带两个参数  弧焊
+    fanucKanbanAjaxSelectPartSerialByArc(Serial_Part, Pass_No) {
         return axios.get(`http://` + ip + `:` + port + `/` + api + `/UnitMeasurementHistory?Part_Serial=` + Serial_Part + `&Pass_No=` + Pass_No, {})
+    }
+    //查询序列号  带两个参数  点焊
+    fanucKanbanAjaxSelectPartSerialBySpot(Serial_Part, Pass_No) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/SpotUnitMeasurementHistory?Part_Serial=` + Serial_Part + `&Pass_No=` + Pass_No, {})
+    }
+    //查询序列号  带两个参数  涂胶
+    fanucKanbanAjaxSelectPartSerialByGluing(Serial_Part, Pass_No) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/SealUnitMeasurementHistory?Part_Serial=` + Serial_Part + `&Pass_No=` + Pass_No, {})
+    }
+    //查询序列号  带两个参数  打磨
+    fanucKanbanAjaxSelectPartSerialBySanding(Serial_Part) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/PolishUnitMeasurementHistory?Part_Serial=` + Serial_Part, {})
+    }
+    //查询序列号  带两个参数  冲压
+    fanucKanbanAjaxSelectPartSerialByStamping(Serial_Part) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/PressUnitMeasurementHistory?Part_Serial=` + Serial_Part, {})
     }
 
     //查询序列号  1个参数 CellID
@@ -132,6 +157,30 @@ export default class CRUD {
         return axios.get(`http://` + ip + `:` + port + `/` + api + `/UnitMeasurementHistory/` + Cell, {})
     }
 
+    //电流电压 1个参数 CellID   弧焊
+    fanucKanbanAjaxSelectUnitMeasurementHistoryByRobotID(Cell) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/UnitMeasurementHistory/` + Cell, {})
+    }
+
+    //电流电压 1个参数 CellID   点焊
+    fanucKanbanAjaxSelectSpotUnitMeasurementHistoryByRobotID(Cell) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/SpotUnitMeasurementHistory/` + Cell, {})
+    }
+
+    //电流电压 1个参数 CellID   涂胶
+    fanucKanbanAjaxSelectSealUnitMeasurementHistoryByRobotID(Cell) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/SealUnitMeasurementHistory/` + Cell, {})
+    }
+
+    //电流电压 1个参数 CellID   打磨
+    fanucKanbanAjaxSelectPolishUnitMeasurementHistoryByRobotID(Cell) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/PolishUnitMeasurementHistory/` + Cell, {})
+    }
+
+    //电流电压 1个参数 CellID   冲压
+    fanucKanbanAjaxSelectPressUnitMeasurementHistoryByRobotID(Cell) {
+        return axios.get(`http://` + ip + `:` + port + `/` + api + `/PressUnitMeasurementHistory/` + Cell, {})
+    }
     // //post ,保存序列号相关参数
     // fanucKanbanAjaxInsertPartSerialRecord(obj) {
     //     return axios.post(`http://` + ip + `:` + port + `/` + api + `/UnitMeasurementHistory/`, { "": obj })

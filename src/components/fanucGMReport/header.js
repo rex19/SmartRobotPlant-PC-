@@ -8,15 +8,15 @@ import { Affix, Badge } from 'antd';
 // const history = createHashHistory()
 
 //三个车间图片引入
-import fanucImage1 from '../../img/fanucLayout2.jpg'
-import fanucImage2 from '../../img/fanucLayout2.jpg'
-import fanucImage3 from '../../img/fanucLayout2.jpg'
+import fanucImage from '../../img/fanuc10Y.jpg'
+// import fanucImage2 from '../../img/fanucLayout.png'
+// import fanucImage3 from '../../img/fanucLayout.png'
 //logo引入
 import SFLogo from '../../img/SFLogo.png'
-import smartLinkLogo from '../../img/SMARTLINK.png'
+import smartLinkLogo from '../../img/SMART LINK.png'
 import fanucLogo from '../../img/logo.png'
 
-let size = 'large'
+// let size = 'fullscreen'
 class fanucGMReportHeader extends React.Component {
     //构造函数 
     constructor(props) {
@@ -30,7 +30,7 @@ class fanucGMReportHeader extends React.Component {
 
     // 打开模态框
     handeleOpen() {
-        this.setState({ size, open: true });
+        this.setState({ size:'fullscreen', open: true });
     }
 
 
@@ -102,17 +102,17 @@ class fanucGMReportHeader extends React.Component {
                 {/*模态框  选择车间*/}
                 <Modal size={size} open={open} onClose={this.close} basic>
                     <Modal.Header>
-                        选择车间
+                        <a style={{fontSize:'3rem',color:'#f5f5f5'}}>选择车间</a>
                      </Modal.Header>
                     <Modal.Content>
 
 
-                        <Grid columns={3} divided>
+                        <Grid columns={5} divided>
                             <Grid.Row>
                                 <Grid.Column>
-                                    <h1>车间1</h1>
-                                    <Card href='fanuc1'>
-                                        <Image src={fanucImage1} />
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间1</h1>
+                                    <Card href='fanuc1' style={{margin:'auto'}}>
+                                        <Image src={fanucImage} />
                                         <Card.Content>
                                             <Card.Header>
                                                 车间1
@@ -137,9 +137,9 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <h1>车间2</h1>
-                                    <Card href='/fanuc1' href='fanuc1'>
-                                        <Image src={fanucImage2} />
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间2</h1>
+                                    <Card  href='fanuc1' style={{margin:'auto'}}>
+                                        <Image src={fanucImage} />
                                         <Card.Content>
                                             <Card.Header>
                                                 车间2
@@ -164,9 +164,9 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <h1>车间3</h1>
-                                    <Card href='fanuc1'>
-                                        <Image src={fanucImage1} />
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间3</h1>
+                                    <Card href='fanuc1' style={{margin:'auto'}}>
+                                        <Image src={fanucImage} />
                                         <Card.Content>
                                             <Card.Header>
                                                 车间3
@@ -190,6 +190,60 @@ class fanucGMReportHeader extends React.Component {
                                         <Message.Header>安全天数:99天</Message.Header>
                                     </Message>
                                 </Grid.Column>
+                                <Grid.Column>
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间4</h1>
+                                    <Card href='fanuc1' style={{margin:'auto'}}>
+                                        <Image src={fanucImage} />
+                                        <Card.Content>
+                                            <Card.Header>
+                                                车间4
+                                        </Card.Header>
+                                        </Card.Content>
+                                    </Card>
+
+                                    <Message negative>
+                                        <Message.Header>产量:10件</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>计划完成率:95%</Message.Header>
+                                    </Message>
+                                    <Message warning>
+                                        <Message.Header >设备开动率:88%</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>质量合格率:99%</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>安全天数:99天</Message.Header>
+                                    </Message>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间5</h1>
+                                    <Card href='fanuc1' style={{margin:'auto'}}>
+                                        <Image src={fanucImage} />
+                                        <Card.Content>
+                                            <Card.Header>
+                                                车间5
+                                        </Card.Header>
+                                        </Card.Content>
+                                    </Card>
+
+                                    <Message negative>
+                                        <Message.Header>产量:10件</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>计划完成率:95%</Message.Header>
+                                    </Message>
+                                    <Message warning>
+                                        <Message.Header >设备开动率:88%</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>质量合格率:99%</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>安全天数:99天</Message.Header>
+                                    </Message>
+                                </Grid.Column>
                             </Grid.Row>
                         </Grid>
                     </Modal.Content>
@@ -199,10 +253,12 @@ class fanucGMReportHeader extends React.Component {
                 <Affix style={{ position: 'absolute', top: '1%', left: '24%' }}>
                     <Image src={smartLinkLogo} size='small' style={{ width: '90px' }} />
                 </Affix>
-                {/*SMARTLINK title*/}
-                <Affix style={{ position: 'absolute', top: '3%', left: '30%' }}>
+                {/*SMARTLINK title
+                <span style={{ fontFamily: 'book antiqua', fontStyle: 'italic', fontSize: '5.6rem', color: 'red' }}>i</span><span>A</span>
+                */}
+                <Affix style={{ position: 'absolute', top: '3%', left: '31%' }}>
                     {/*<Label as='a' color='red' tag>集团</Label>*/}
-                    <div><span style={{ fontFamily: 'arial', fontSize: '4rem', color: 'red', fontWeight: 'bold' }}>SHANGHAI-FANUC Smart LINK<span style={{ fontFamily: 'book antiqua', fontStyle: 'italic', fontSize: '5.6rem', color: 'red' }}>i</span><span>A</span></span></div>
+                    <div><span style={{ fontFamily: 'arial', fontSize: '4rem', color: 'red', fontWeight: 'bold' }}>SHANGHAI-FANUC Smart LINK</span></div>
                 </Affix>
 
                 {/*//切换语言*/}

@@ -6,16 +6,15 @@ import { Affix, Badge } from 'antd';
 import { createHashHistory } from 'history'
 const history = createHashHistory()
 
-import fanucImage1 from '../../img/fanucLayout2.jpg'
-import fanucImage2 from '../../img/fanucLayout2.jpg'
-import fanucImage3 from '../../img/fanucLayout2.jpg'
+import fanucImage1 from '../../img/fanucLayout.png'
+import fanucImage2 from '../../img/fanucLayout.png'
+import fanucImage3 from '../../img/fanucLayout.png'
 
 import SFLogo from '../../img/SFLogo.png'
 import smartLinkLogo from '../../img/SMARTLINK.png'
 import fanucLogo from '../../img/logo.png'
 
 let simpleSteps1 = {}
-let size = 'large'
 class fanucGMReportHeader extends React.Component {
     constructor(props) {
         super(props);
@@ -27,7 +26,7 @@ class fanucGMReportHeader extends React.Component {
     close = () => this.setState({ open: false })
 
     handeleOpen() {
-        this.setState({ size, open: true });
+        this.setState({ size:'fullscreen', open: true });
     }
 
 
@@ -102,16 +101,16 @@ class fanucGMReportHeader extends React.Component {
 
                 <Modal size={size} open={open} onClose={this.close} basic>
                     <Modal.Header>
-                        Selection Plant
+                        <a style={{fontSize:'3rem',color:'#f5f5f5'}}>Selection Plant</a>
           </Modal.Header>
                     <Modal.Content>
 
 
-                        <Grid columns={3} divided>
+                        <Grid columns={5} divided>
                             <Grid.Row>
                                 <Grid.Column>
-                                    <h1>First Plant</h1>
-                                    <Card href='fanuc1EN'>
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>First Plant</h1>
+                                    <Card href='fanuc1EN' style={{margin:'auto'}}>
                                         <Image src={fanucImage1} />
                                         <Card.Content>
                                             <Card.Header>
@@ -137,8 +136,8 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <h1>Second Plant</h1>
-                                    <Card href='fanuc1EN'>
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>Second Plant</h1>
+                                    <Card href='fanuc1EN' style={{margin:'auto'}}>
                                         <Image src={fanucImage2} />
                                         <Card.Content>
                                             <Card.Header>
@@ -164,8 +163,8 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <h1>Third Plant</h1>
-                                    <Card href='fanuc1EN'>
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>Third Plant</h1>
+                                    <Card href='fanuc1EN' style={{margin:'auto'}}>
                                         <Image src={fanucImage1} />
                                         <Card.Content>
                                             <Card.Header>
@@ -188,6 +187,60 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                     <Message positive>
                                         <Message.Header>Safety:99Days</Message.Header>
+                                    </Message>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>Fourth Plant</h1>
+                                    <Card href='fanuc1EN' style={{margin:'auto'}}>
+                                        <Image src={fanucImage1} />
+                                        <Card.Content>
+                                            <Card.Header>
+                                                Fourth Plant
+                                        </Card.Header>
+                                        </Card.Content>
+                                    </Card>
+
+                                    <Message negative>
+                                        <Message.Header>Output:10pcs</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>Completion Rate:95%</Message.Header>
+                                    </Message>
+                                    <Message warning>
+                                        <Message.Header >Equipment Running Rate: 88%</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>Percent Of Pass:99%</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>Safety :99Days</Message.Header>
+                                    </Message>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>Fifth Plant</h1>
+                                    <Card href='fanuc1EN' style={{margin:'auto'}}>
+                                        <Image src={fanucImage1} />
+                                        <Card.Content>
+                                            <Card.Header>
+                                                Fifth Plant
+                                        </Card.Header>
+                                        </Card.Content>
+                                    </Card>
+
+                                    <Message negative>
+                                        <Message.Header>Output:10pcs</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>Completion Rate:95%</Message.Header>
+                                    </Message>
+                                    <Message warning>
+                                        <Message.Header >Equipment Running Rate: 88%</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>Percent Of Pass:99%</Message.Header>
+                                    </Message>
+                                    <Message positive>
+                                        <Message.Header>Safety :99Days</Message.Header>
                                     </Message>
                                 </Grid.Column>
                             </Grid.Row>
