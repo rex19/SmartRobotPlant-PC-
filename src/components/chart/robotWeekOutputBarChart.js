@@ -166,6 +166,7 @@ class RobotWeekOutputBarChart extends Component {
                             color: '#32CD32'
                         },
                     },
+                    barWidth:15,
                     data: this.props.TodayAllRobotsxSevenDaysAllRobotsOutputs.Data || [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6]
                 }
             ]

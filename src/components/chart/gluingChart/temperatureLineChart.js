@@ -52,7 +52,7 @@ const TemperatureLineChart = (props) => (
                         }
                     },
                     // data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-                    data: props.CellhandleSearchRes.RealTimeTorqueTimePoints || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                    data: props.CellhandleSearchRes.RealTimeTemperatureTimePoints || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
                 }
             ],
             yAxis: [{
@@ -153,7 +153,7 @@ const TemperatureLineChart = (props) => (
                     yAxisIndex: 1,
                     smooth: true,
                     // data: [10, 50, 60, 30, 50, 70, 10, 70, 20, 80],
-                    data: props.CellhandleSearchRes.RealTimeTorque|| [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    data: props.CellhandleSearchRes.RealTimeTemperature|| [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     // data: data,
                     markPoint: {
                         data: [

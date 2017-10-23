@@ -30,7 +30,7 @@ class fanucGMReportHeader extends React.Component {
 
     // 打开模态框
     handeleOpen() {
-        this.setState({ size:'fullscreen', open: true });
+        this.setState({ size: 'fullscreen', open: true });
     }
 
 
@@ -52,7 +52,7 @@ class fanucGMReportHeader extends React.Component {
                         <Step active>
                             <Icon name='bar chart' />
                             <Step.Content>
-                                <Step.Title>{this.props.TodayAllQuanlityRate + '%'}</Step.Title>
+                                <Step.Title>{this.props.TodayAllQuanlityRate || 97}%</Step.Title>
                                 <Step.Description>质量合格率</Step.Description>
                             </Step.Content>
                         </Step>
@@ -60,7 +60,7 @@ class fanucGMReportHeader extends React.Component {
                         <Step active>
                             <Icon name='area chart' />
                             <Step.Content>
-                                <Step.Title>{this.props.TodayAllRobotsPlanRate + '%'}</Step.Title>
+                                <Step.Title>{this.props.TodayAllRobotsPlanRate || 86}%</Step.Title>
                                 <Step.Description>计划完成率</Step.Description>
                             </Step.Content>
                         </Step>
@@ -68,14 +68,14 @@ class fanucGMReportHeader extends React.Component {
                         <Step active>
                             <Icon name='line chart' />
                             <Step.Content>
-                                <Step.Title>91.5%</Step.Title>
+                                <Step.Title>{this.props.TodayAllRobotsRunningRatio || 96}%</Step.Title>
                                 <Step.Description>设备开动率</Step.Description>
                             </Step.Content>
                         </Step>
                         <Step active>
                             <Icon name='area chart' />
                             <Step.Content>
-                                <Step.Title>{(this.props.TodayAllRobotsOutputs || 4000) + '件'}</Step.Title>
+                                <Step.Title>{this.props.TodayAllRobotsOutputs || 4000}件</Step.Title>
                                 <Step.Description>产量</Step.Description>
                             </Step.Content>
                         </Step>
@@ -83,7 +83,7 @@ class fanucGMReportHeader extends React.Component {
                         <Step active>
                             <Icon name='line chart' />
                             <Step.Content>
-                                <Step.Title>{(this.props.TodayAllPlantSafetyDays || 197) + '日'}</Step.Title>
+                                <Step.Title>{this.props.TodayAllPlantSafetyDays || 197}日</Step.Title>
                                 <Step.Description>安全生产时间</Step.Description>
                             </Step.Content>
                         </Step>
@@ -102,16 +102,16 @@ class fanucGMReportHeader extends React.Component {
                 {/*模态框  选择车间*/}
                 <Modal size={size} open={open} onClose={this.close} basic>
                     <Modal.Header>
-                        <a style={{fontSize:'3rem',color:'#f5f5f5'}}>选择车间</a>
-                     </Modal.Header>
+                        <a style={{ fontSize: '3rem', color: '#f5f5f5' }}>选择车间</a>
+                    </Modal.Header>
                     <Modal.Content>
 
 
                         <Grid columns={5} divided>
                             <Grid.Row>
                                 <Grid.Column>
-                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间1</h1>
-                                    <Card href='fanuc1' style={{margin:'auto'}}>
+                                    <h1 style={{ fontSize: '2rem', color: '#f5f5f5', marginBottom: '17px', textAlign: 'center' }}>车间1</h1>
+                                    <Card href='fanuc1' style={{ margin: 'auto' }}>
                                         <Image src={fanucImage} />
                                         <Card.Content>
                                             <Card.Header>
@@ -137,8 +137,8 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间2</h1>
-                                    <Card  href='fanuc1' style={{margin:'auto'}}>
+                                    <h1 style={{ fontSize: '2rem', color: '#f5f5f5', marginBottom: '17px', textAlign: 'center' }}>车间2</h1>
+                                    <Card href='fanuc1' style={{ margin: 'auto' }}>
                                         <Image src={fanucImage} />
                                         <Card.Content>
                                             <Card.Header>
@@ -164,8 +164,8 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间3</h1>
-                                    <Card href='fanuc1' style={{margin:'auto'}}>
+                                    <h1 style={{ fontSize: '2rem', color: '#f5f5f5', marginBottom: '17px', textAlign: 'center' }}>车间3</h1>
+                                    <Card href='fanuc1' style={{ margin: 'auto' }}>
                                         <Image src={fanucImage} />
                                         <Card.Content>
                                             <Card.Header>
@@ -191,8 +191,8 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间4</h1>
-                                    <Card href='fanuc1' style={{margin:'auto'}}>
+                                    <h1 style={{ fontSize: '2rem', color: '#f5f5f5', marginBottom: '17px', textAlign: 'center' }}>车间4</h1>
+                                    <Card href='fanuc1' style={{ margin: 'auto' }}>
                                         <Image src={fanucImage} />
                                         <Card.Content>
                                             <Card.Header>
@@ -218,8 +218,8 @@ class fanucGMReportHeader extends React.Component {
                                     </Message>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <h1 style={{fontSize:'2rem',color:'#f5f5f5',marginBottom:'17px',textAlign:'center'}}>车间5</h1>
-                                    <Card href='fanuc1' style={{margin:'auto'}}>
+                                    <h1 style={{ fontSize: '2rem', color: '#f5f5f5', marginBottom: '17px', textAlign: 'center' }}>车间5</h1>
+                                    <Card href='fanuc1' style={{ margin: 'auto' }}>
                                         <Image src={fanucImage} />
                                         <Card.Content>
                                             <Card.Header>

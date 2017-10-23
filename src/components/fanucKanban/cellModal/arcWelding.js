@@ -208,7 +208,7 @@ export default class ArcWelding extends React.Component {
                                 <Grid.Column>
                                     <Button.Group fluid>
                                         <Button>OEE</Button>
-                                        <Button positive>75%</Button>
+                                        <Button positive>95%</Button>
                                     </Button.Group>
                                 </Grid.Column>
                                 <Grid.Column>
@@ -293,7 +293,7 @@ export default class ArcWelding extends React.Component {
                 {/*ArcWeldingChartsModal  */}
                 <Modal size={size} open={ArcWeldingChartsModalOpen} onClose={this.ArcWeldingChartsModalClose} closeIcon='close' basic>
                     <Modal.Header className='ModalContentClass'>
-                       弧焊实时数据
+                        弧焊实时数据
                      </Modal.Header>
                     <Modal.Content className='ModalContentClass'>
                         <Grid>
@@ -338,7 +338,7 @@ export default class ArcWelding extends React.Component {
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft' >电压设定标准值</Button>
-                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Standard_Voltage_AVGLine + 'V'}</Button>
+                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Standard_Voltage_AVGLine}V</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>电压上下限波动(%)</Button>
@@ -346,7 +346,7 @@ export default class ArcWelding extends React.Component {
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>电流设定标准值</Button>
-                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Standard_Current_AVGLine + 'A'}</Button>
+                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Standard_Current_AVGLine}A</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>电流上下限波动(%)</Button>
@@ -354,11 +354,11 @@ export default class ArcWelding extends React.Component {
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>电压超出百分比</Button>
-                                        <Button positive className='ButtonRight'>{(this.state.handleSearchResFirst.Voltage_Real_Over_Percent * 100).toFixed(2) + '%'}</Button>
+                                        <Button positive className='ButtonRight'>{(this.state.handleSearchResFirst.Voltage_Real_Over_Percent * 100).toFixed(2)}%</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>电流超出百分比</Button>
-                                        <Button positive className='ButtonRight'>{(this.state.handleSearchResFirst.Current_Real_Over_Percent * 100).toFixed(2) + '%'}</Button>
+                                        <Button positive className='ButtonRight'>{(this.state.handleSearchResFirst.Current_Real_Over_Percent * 100).toFixed(2)}%</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>数据上传时间</Button>

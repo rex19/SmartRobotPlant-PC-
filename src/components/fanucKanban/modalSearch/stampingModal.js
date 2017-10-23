@@ -128,30 +128,33 @@ export default class StampingModal extends React.Component {
                   <Button positive className='ButtonRight'>～</Button>
                 </Button.Group>
                 <Button.Group style={{ width: '100%' }}>
+                  <Button className='ButtonLeft' >节拍</Button>
+                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Beat || 0}s</Button>
+                </Button.Group>
+                <Button.Group style={{ width: '100%' }}>
                   <Button className='ButtonLeft'>J1电流允许值</Button>
-                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J1CurrentUSL || 0}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J1CurrentLSL || 0}</Button>
+                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J1CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J1CurrentLSL || 0}A</Button>
                 </Button.Group>
                 <Button.Group style={{ width: '100%' }}>
                   <Button className='ButtonLeft'>J2电流允许值</Button>
-                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J2CurrentUSL || 0}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J2CurrentLSL || 0}</Button>
+                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J2CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J2CurrentLSL || 0}A</Button>
                 </Button.Group>
                 <Button.Group style={{ width: '100%' }}>
                   <Button className='ButtonLeft'>J3电流允许值</Button>
-                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J3CurrentUSL || 0}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J3CurrentLSL || 0}</Button>
+                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J3CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J3CurrentLSL || 0}A</Button>
                 </Button.Group>
                 <Button.Group style={{ width: '100%' }}>
                   <Button className='ButtonLeft'>J4电流允许值</Button>
-                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J4CurrentUSL || 0}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J4CurrentLSL || 0}</Button>
+                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J4CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J4CurrentLSL || 0}A</Button>
                 </Button.Group>
                 <Button.Group style={{ width: '100%' }}>
                   <Button className='ButtonLeft'>J5电流允许值</Button>
-                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J5CurrentUSL || 0}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J5CurrentLSL || 0}</Button>
+                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J5CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J5CurrentLSL || 0}A</Button>
                 </Button.Group>
                 <Button.Group style={{ width: '100%' }}>
                   <Button className='ButtonLeft'>J6电流允许值</Button>
-                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J6CurrentUSL || 0}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J6CurrentLSL || 0}</Button>
+                  <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J6CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J6CurrentLSL || 0}A</Button>
                 </Button.Group>
-
               </Grid.Column>
             </Grid.Row>
           </Grid>

@@ -223,75 +223,56 @@ class fanucKanban extends React.Component {
     //判断每个Cell对应的状态 更新到state
     if (this.state.CellState !== undefined) {
       //1号
-      if (this.state.CellState[9].State === 1) {
-        this.setState({ Cell1State: 'grey' })  //powerOff
-      } else if (this.state.CellState[9].State === 2) {
-        this.setState({ Cell1State: 'red' })  //Fault
-      } else if (this.state.CellState[9].State === 3) {
-        this.setState({ Cell1State: 'yellow' })  //Ready
-      } else if (this.state.CellState[9].State === 4) {
-        this.setState({ Cell1State: 'green' })  //Running
+      if (this.state.CellState[20].State === 1) {
+        this.setState({ Cell1State: 'grey', Cell1Output: this.state.CellState[20].Output })  //powerOff
+      } else if (this.state.CellState[20].State === 2) {
+        this.setState({ Cell1State: 'red', Cell1Output: this.state.CellState[20].Output })  //Fault
+      } else if (this.state.CellState[20].State === 3) {
+        this.setState({ Cell1State: 'yellow', Cell1Output: this.state.CellState[20].Output })  //Ready
+      } else if (this.state.CellState[20].State === 4) {
+        this.setState({ Cell1State: 'green', Cell1Output: this.state.CellState[20].Output })  //Running
       }
       //2号
-      if (this.state.CellState[8].State === 1) {
-        this.setState({ Cell2State: 'grey' })  //powerOff
-      } else if (this.state.CellState[8].State === 2) {
-        this.setState({ Cell2State: 'red' })  //Fault
-      } else if (this.state.CellState[8].State === 3) {
-        this.setState({ Cell2State: 'yellow' })  //Ready
-      } else if (this.state.CellState[8].State === 4) {
-        this.setState({ Cell2State: 'green' })  //Running
+      if (this.state.CellState[19].State === 1) {
+        this.setState({ Cell2State: 'grey', Cell2Output: this.state.CellState[19].Output })  //powerOff
+      } else if (this.state.CellState[19].State === 2) {
+        this.setState({ Cell2State: 'red', Cell2Output: this.state.CellState[19].Output })  //Fault
+      } else if (this.state.CellState[19].State === 3) {
+        this.setState({ Cell2State: 'yellow', Cell2Output: this.state.CellState[19].Output })  //Ready
+      } else if (this.state.CellState[19].State === 4) {
+        this.setState({ Cell2State: 'green', Cell2Output: this.state.CellState[19].Output })  //Running
       }
       //3号
-      if (this.state.CellState[5].State === 1) {
-        this.setState({ Cell3State: 'grey' })  //powerOff
-      } else if (this.state.CellState[5].State === 2) {
-        this.setState({ Cell3State: 'red' })  //Fault
-      } else if (this.state.CellState[5].State === 3) {
-        this.setState({ Cell3State: 'yellow' })  //Ready
-      } else if (this.state.CellState[5].State === 4) {
-        this.setState({ Cell3State: 'green' })  //Running
+      if (this.state.CellState[12].State === 1) {
+        this.setState({ Cell3State: 'grey', Cell3Output: this.state.CellState[12].Output })  //powerOff
+      } else if (this.state.CellState[12].State === 2) {
+        this.setState({ Cell3State: 'red', Cell3Output: this.state.CellState[12].Output })  //Fault
+      } else if (this.state.CellState[12].State === 3) {
+        this.setState({ Cell3State: 'yellow', Cell3Output: this.state.CellState[12].Output })  //Ready
+      } else if (this.state.CellState[12].State === 4) {
+        this.setState({ Cell3State: 'green', Cell3Output: this.state.CellState[12].Output })  //Running
       }
       //4号
       if (this.state.CellState[6].State === 1) {
-        this.setState({ Cell4State: 'grey' })  //powerOff
+        this.setState({ Cell4State: 'grey', Cell4Output: this.state.CellState[6].Output })  //powerOff
       } else if (this.state.CellState[6].State === 2) {
-        this.setState({ Cell4State: 'red' })  //Fault
+        this.setState({ Cell4State: 'red', Cell4Output: this.state.CellState[6].Output })  //Fault
       } else if (this.state.CellState[6].State === 3) {
-        this.setState({ Cell4State: 'yellow' })  //Ready
+        this.setState({ Cell4State: 'yellow', Cell4Output: this.state.CellState[6].Output })  //Ready
       } else if (this.state.CellState[6].State === 4) {
-        this.setState({ Cell4State: 'green' })  //Running
+        this.setState({ Cell4State: 'green', Cell4Output: this.state.CellState[6].Output })  //Running
       }
       //5号
       if (this.state.CellState[7].State === 1) {
-        this.setState({ Cell5State: 'grey' })  //powerOff
+        this.setState({ Cell5State: 'grey', Cell5Output: this.state.CellState[7].Output })  //powerOff
       } else if (this.state.CellState[7].State === 2) {
-        this.setState({ Cell5State: 'red' })  //Fault
+        this.setState({ Cell5State: 'red', Cell5Output: this.state.CellState[7].Output })  //Fault
       } else if (this.state.CellState[7].State === 3) {
-        this.setState({ Cell5State: 'yellow' })  //Ready
+        this.setState({ Cell5State: 'yellow', Cell5Output: this.state.CellState[7].Output })  //Ready
       } else if (this.state.CellState[7].State === 4) {
-        this.setState({ Cell5State: 'green' })  //Running
+        this.setState({ Cell5State: 'green', Cell5Output: this.state.CellState[7].Output })  //Running
       }
-      //6号
-      if (this.state.CellState[10].State === 1) {
-        this.setState({ Cell6State: 'grey' })  //powerOff
-      } else if (this.state.CellState[10].State === 2) {
-        this.setState({ Cell6State: 'red' })  //Fault
-      } else if (this.state.CellState[10].State === 3) {
-        this.setState({ Cell6State: 'yellow' })  //Ready
-      } else if (this.state.CellState[10].State === 4) {
-        this.setState({ Cell6State: 'green' })  //Running
-      }
-      //7号
-      if (this.state.CellState[4].State === 1) {
-        this.setState({ Cell7State: 'grey' })  //powerOff
-      } else if (this.state.CellState[4].State === 2) {
-        this.setState({ Cell7State: 'red' })  //Fault
-      } else if (this.state.CellState[4].State === 3) {
-        this.setState({ Cell7State: 'yellow' })  //Ready
-      } else if (this.state.CellState[4].State === 4) {
-        this.setState({ Cell7State: 'green' })  //Running
-      }
+
     }
 
     timer1 = setInterval(() => this.AjaxUpdateTotalRobotData(), 5000);
@@ -328,75 +309,56 @@ class fanucKanban extends React.Component {
       //判断每个Cell对应的状态 更新到state
       if (this.state.CellState !== undefined) {
         //1号
-        if (this.state.CellState[9].State === 1) {
-          this.setState({ Cell1State: 'grey' })  //powerOff
-        } else if (this.state.CellState[9].State === 2) {
-          this.setState({ Cell1State: 'red' })  //Fault
-        } else if (this.state.CellState[9].State === 3) {
-          this.setState({ Cell1State: 'yellow' })  //Ready
-        } else if (this.state.CellState[9].State === 4) {
-          this.setState({ Cell1State: 'green' })  //Running
+        if (this.state.CellState[20].State === 1) {
+          this.setState({ Cell1State: 'grey', Cell1Output: this.state.CellState[20].Output })  //powerOff
+        } else if (this.state.CellState[20].State === 2) {
+          this.setState({ Cell1State: 'red', Cell1Output: this.state.CellState[20].Output })  //Fault
+        } else if (this.state.CellState[20].State === 3) {
+          this.setState({ Cell1State: 'yellow', Cell1Output: this.state.CellState[20].Output })  //Ready
+        } else if (this.state.CellState[20].State === 4) {
+          this.setState({ Cell1State: 'green', Cell1Output: this.state.CellState[20].Output })  //Running
         }
         //2号
-        if (this.state.CellState[8].State === 1) {
-          this.setState({ Cell2State: 'grey' })  //powerOff
-        } else if (this.state.CellState[8].State === 2) {
-          this.setState({ Cell2State: 'red' })  //Fault
-        } else if (this.state.CellState[8].State === 3) {
-          this.setState({ Cell2State: 'yellow' })  //Ready
-        } else if (this.state.CellState[8].State === 4) {
-          this.setState({ Cell2State: 'green' })  //Running
+        if (this.state.CellState[19].State === 1) {
+          this.setState({ Cell2State: 'grey', Cell2Output: this.state.CellState[19].Output })  //powerOff
+        } else if (this.state.CellState[19].State === 2) {
+          this.setState({ Cell2State: 'red', Cell2Output: this.state.CellState[19].Output })  //Fault
+        } else if (this.state.CellState[19].State === 3) {
+          this.setState({ Cell2State: 'yellow', Cell2Output: this.state.CellState[19].Output })  //Ready
+        } else if (this.state.CellState[19].State === 4) {
+          this.setState({ Cell2State: 'green', Cell2Output: this.state.CellState[19].Output })  //Running
         }
         //3号
-        if (this.state.CellState[5].State === 1) {
-          this.setState({ Cell3State: 'grey' })  //powerOff
-        } else if (this.state.CellState[5].State === 2) {
-          this.setState({ Cell3State: 'red' })  //Fault
-        } else if (this.state.CellState[5].State === 3) {
-          this.setState({ Cell3State: 'yellow' })  //Ready
-        } else if (this.state.CellState[5].State === 4) {
-          this.setState({ Cell3State: 'green' })  //Running
+        if (this.state.CellState[12].State === 1) {
+          this.setState({ Cell3State: 'grey', Cell3Output: this.state.CellState[12].Output })  //powerOff
+        } else if (this.state.CellState[12].State === 2) {
+          this.setState({ Cell3State: 'red', Cell3Output: this.state.CellState[12].Output })  //Fault
+        } else if (this.state.CellState[12].State === 3) {
+          this.setState({ Cell3State: 'yellow', Cell3Output: this.state.CellState[12].Output })  //Ready
+        } else if (this.state.CellState[12].State === 4) {
+          this.setState({ Cell3State: 'green', Cell3Output: this.state.CellState[12].Output })  //Running
         }
         //4号
         if (this.state.CellState[6].State === 1) {
-          this.setState({ Cell4State: 'grey' })  //powerOff
+          this.setState({ Cell4State: 'grey', Cell4Output: this.state.CellState[6].Output })  //powerOff
         } else if (this.state.CellState[6].State === 2) {
-          this.setState({ Cell4State: 'red' })  //Fault
+          this.setState({ Cell4State: 'red', Cell4Output: this.state.CellState[6].Output })  //Fault
         } else if (this.state.CellState[6].State === 3) {
-          this.setState({ Cell4State: 'yellow' })  //Ready
+          this.setState({ Cell4State: 'yellow', Cell4Output: this.state.CellState[6].Output })  //Ready
         } else if (this.state.CellState[6].State === 4) {
-          this.setState({ Cell4State: 'green' })  //Running
+          this.setState({ Cell4State: 'green', Cell4Output: this.state.CellState[6].Output })  //Running
         }
         //5号
         if (this.state.CellState[7].State === 1) {
-          this.setState({ Cell5State: 'grey' })  //powerOff
+          this.setState({ Cell5State: 'grey', Cell5Output: this.state.CellState[7].Output })  //powerOff
         } else if (this.state.CellState[7].State === 2) {
-          this.setState({ Cell5State: 'red' })  //Fault
+          this.setState({ Cell5State: 'red', Cell5Output: this.state.CellState[7].Output })  //Fault
         } else if (this.state.CellState[7].State === 3) {
-          this.setState({ Cell5State: 'yellow' })  //Ready
+          this.setState({ Cell5State: 'yellow', Cell5Output: this.state.CellState[7].Output })  //Ready
         } else if (this.state.CellState[7].State === 4) {
-          this.setState({ Cell5State: 'green' })  //Running
+          this.setState({ Cell5State: 'green', Cell5Output: this.state.CellState[7].Output })  //Running
         }
-        //6号
-        if (this.state.CellState[10].State === 1) {
-          this.setState({ Cell6State: 'grey' })  //powerOff
-        } else if (this.state.CellState[10].State === 2) {
-          this.setState({ Cell6State: 'red' })  //Fault
-        } else if (this.state.CellState[10].State === 3) {
-          this.setState({ Cell6State: 'yellow' })  //Ready
-        } else if (this.state.CellState[10].State === 4) {
-          this.setState({ Cell6State: 'green' })  //Running
-        }
-        //7号
-        if (this.state.CellState[4].State === 1) {
-          this.setState({ Cell7State: 'grey' })  //powerOff
-        } else if (this.state.CellState[4].State === 2) {
-          this.setState({ Cell7State: 'red' })  //Fault
-        } else if (this.state.CellState[4].State === 3) {
-          this.setState({ Cell7State: 'yellow' })  //Ready
-        } else if (this.state.CellState[4].State === 4) {
-          this.setState({ Cell7State: 'green' })  //Running
-        }
+
       }
     } catch (error) {
       console.log('fanucKanban/AjaxUpdateTotalRobotData/ajax:', error)
@@ -435,6 +397,9 @@ class fanucKanban extends React.Component {
   handleHome() {
     location.href = 'http://172.16.29.188/FANUC/UnitListTrace.html'
     // location.href = 'http://dsm.smart-flow.cn:7001/FANUC/UnitListTrace.html'
+  }
+  GoBack(){
+    location.href = 'http://172.16.29.188:60/fanuc2'
   }
   //显示/隐藏 每个Cell的详细信息
   handleHideLabel = async (e, obj) => {
@@ -590,9 +555,13 @@ class fanucKanban extends React.Component {
           Cell3State={this.state.Cell3State}
           Cell4State={this.state.Cell4State}
           Cell5State={this.state.Cell5State}
-          Cell6State={this.state.Cell6State}
-          Cell7State={this.state.Cell7State}
-
+          // Cell6State={this.state.Cell6State}
+          // Cell7State={this.state.Cell7State}
+          Cell1Output={this.state.Cell1Output}
+          Cell2Output={this.state.Cell2Output}
+          Cell3Output={this.state.Cell3Output}
+          Cell4Output={this.state.Cell4Output}
+          Cell5Output={this.state.Cell5Output}
           CloseInterval={() => this.CloseInterval()}
           OpenInterval={() => this.OpenInterval()}
         />
@@ -600,12 +569,12 @@ class fanucKanban extends React.Component {
         {/*顶部文字说明 */}
         <Affix style={{ position: 'absolute', top: '17%', right: '4%' }}>
           <div className=' topTextTitleDiv ' onMouseOver={() => console.log('yesyesyes')}>
-            <a className='topTextTitle text3D ' >车间</a>
+            <a className='topTextTitle text3D ' onClick={this.GoBack} >车间</a>
             {/* <h1 class="text3D"><span>Gradient 3D text</span></h1> */}
           </div>
         </Affix>
         {/*机器人故障走马灯*/}
-        <Affix style={{ position: 'absolute', top: '16%', right: '43%' }}>
+        <Affix style={{ position: 'absolute', top: '13%', right: '22%' }}>
           <div style={{ margin: '3%', width: '300px' }}>
             <Carousel autoplay vertical="true" style={{ margin: '3%', boxShadow: '0 15px 20px rgba(0, 0, 0, 1)' }}>
               {this.state.CurrentFaultRobotsArray}
@@ -615,13 +584,13 @@ class fanucKanban extends React.Component {
         {/*左边每个颜色的注释*/}
         <Affix style={{ position: 'absolute', bottom: '5%', right: '3%' }}>
           <div >
-            <Badge status="success" text={<a style={{color:'white'}}>运行中</a>} />
+            <Badge status="success" text={<a style={{ color: 'white' }}>运行中</a>} />
             <br />
-            <Badge status="error" text={<a style={{color:'white'}}>故障中</a>} />
+            <Badge status="error" text={<a style={{ color: 'white' }}>故障中</a>} />
             <br />
-            <Badge status="default" text={<a style={{color:'white'}}>停机中</a>} />
+            <Badge status="default" text={<a style={{ color: 'white' }}>停机中</a>} />
             <br />
-            <Badge status="warning" text={<a style={{color:'white'}}>等待中</a>} />
+            <Badge status="warning" text={<a style={{ color: 'white' }}>等待中</a>} />
           </div>
         </Affix>
 
@@ -739,14 +708,14 @@ class fanucKanban extends React.Component {
                 <Grid.Column  >
                   <div className='MenuSubDiv'>
                     <label className='MenuSubDivLabelName'>追溯系统</label><br />
-                      <Icon name='table' size='massive' style={{marginLeft: '32%'}} onClick={this.handleHome} />
+                    <Icon name='table' size='massive' style={{ marginLeft: '32%' }} onClick={this.handleHome} />
                   </div>
                 </Grid.Column>
                 <Grid.Column >
                   <div className='MenuSubDiv'>
                     <label className='MenuSubDivLabelName'> 工作站明细</label><br />
                     <Segment compact className='MenuSubDivIcon' >
-                      <Radio toggle onChange={this.handleHideLabel.bind(this)}  defaultChecked={this.state.RadioValue} size='massive' />
+                      <Radio toggle onChange={this.handleHideLabel.bind(this)} defaultChecked={this.state.RadioValue} size='massive' />
                     </Segment>
                   </div>
                 </Grid.Column>

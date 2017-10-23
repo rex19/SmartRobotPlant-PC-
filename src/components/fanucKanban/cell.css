@@ -1,16 +1,16 @@
 /* CellLabel */
-.cellLabel{
-    height: 64px;
-    background: red;
-   transition: width 2s, height 2s, transform 2s;
+.CellLabel{
+    /* height: 64px; */
+    background-color: rgba(230,230,230,.6) !important;
+   /* transition: width 2s, height 2s, transform 2s; */
 }
 
-
-.cellLabel:hover{
+/* 
+.CellLabel:hover{
     width: 200px;
     height: 200px;
     transform: rotate(8deg);
-}
+} */
 
 .robotLogo:hover{
     width: 200px;

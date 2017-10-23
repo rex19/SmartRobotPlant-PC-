@@ -14,10 +14,14 @@ body {
   position: relative;
   width:1920px;
   height: 1080px; 
+  background-color: #080808;
   /* background: red; */
   /* background-image: url('../../img/fanucLayout.png') !important ; */
-  background-image: url('../../img/fanuc10Y.jpg') !important ;
-  background-size:1920px 1080px !important;
+  /* background-image: url('../../img/fanuc10Y.jpg') !important ; */
+  /* background-image: url('../../img/FANUCBackgroundDash.png') !important ; */
+  background-image: url('../../img/FANUCBackground.png') !important ;
+  /* background-size:1920px 1080px !important; */
+  background-size:94% 96% !important;
   background-attachment:fixed !important;
   background-repeat:no-repeat !important;
 }

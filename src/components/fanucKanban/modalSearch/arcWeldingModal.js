@@ -144,7 +144,7 @@ export default class ArcWeldingModal extends React.Component {
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>电压设定标准值</Button>
-                                    <Button positive className='ButtonRight'>{this.state.CellhandleSearchResFirst.Standard_Voltage_AVGLine || 0 + 'V'}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.CellhandleSearchResFirst.Standard_Voltage_AVGLine || 0 }V</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>电压上下限波动</Button>
@@ -152,7 +152,7 @@ export default class ArcWeldingModal extends React.Component {
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>电流设定标准值</Button>
-                                    <Button positive className='ButtonRight'>{this.state.CellhandleSearchResFirst.Standard_Current_AVGLine || 0 + 'A'}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.CellhandleSearchResFirst.Standard_Current_AVGLine || 0 }A</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>电流上下限波动</Button>
@@ -160,11 +160,11 @@ export default class ArcWeldingModal extends React.Component {
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>电压超出百分比</Button>
-                                    <Button positive className='ButtonRight'>{(this.state.CellhandleSearchResFirst.Voltage_Real_Over_Percent * 100 || 0 * 100).toFixed(2) + '%'}</Button>
+                                    <Button positive className='ButtonRight'>{(this.state.CellhandleSearchResFirst.Voltage_Real_Over_Percent * 100 || 0 * 100).toFixed(2) }%</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>电流超出百分比</Button>
-                                    <Button positive className='ButtonRight'>{(this.state.CellhandleSearchResFirst.Current_Real_Over_Percent * 100 || 0 * 100).toFixed(2) + '%'}</Button>
+                                    <Button positive className='ButtonRight'>{(this.state.CellhandleSearchResFirst.Current_Real_Over_Percent * 100 || 0 * 100).toFixed(2) }%</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>数据上传时间</Button>

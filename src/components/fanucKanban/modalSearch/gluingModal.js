@@ -121,43 +121,47 @@ export default class GluingModal extends React.Component {
                                 </div>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>工件序列号</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Part_Serial}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Part_Serial || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>胶条号</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Pass_No}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Pass_No || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>开始时间</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Start_Time}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Start_Time || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>结束时间</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.End_Time}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.End_Time || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>采集周期</Button>
                                     <Button positive className='ButtonRight'>24ms</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
+                                    <Button className='ButtonLeft'>流量类型</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.FlowType || 0}</Button>
+                                </Button.Group>
+                                <Button.Group style={{ width: '100%' }}>
+                                    <Button className='ButtonLeft'>胶条直径</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.SealAmount || 0 }mm</Button>
+                                </Button.Group>
+                                <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>设定温度</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StandardTemperature}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StandardTemperature || 0 }˚C</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>上限压力</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.MaxTorque}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.MaxTorque || 0 }N</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>下限压力</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.MinTorque}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.MinTorque || 0 }N</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>质量反馈</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.QualityFeedBack}</Button>
-                                </Button.Group>
-                                <Button.Group style={{ width: '100%' }}>
-                                    <Button className='ButtonLeft'>材料类型</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.MaterialType}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.QualityFeedBack || 0}</Button>
                                 </Button.Group>
                             </Grid.Column>
                         </Grid.Row>

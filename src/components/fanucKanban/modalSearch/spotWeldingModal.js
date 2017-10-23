@@ -121,19 +121,19 @@ export default class SpotWeldingModal extends React.Component {
                                 </div>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>工件序列号</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Part_Serial}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Part_Serial || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>焊点号</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Pass_No}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.Pass_No || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>开始时间</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StartTime}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StartTime || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>结束时间</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.EndTime}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.EndTime || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>采集周期</Button>
@@ -141,35 +141,35 @@ export default class SpotWeldingModal extends React.Component {
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>板厚</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.PlateThickness}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.PlateThickness || 0}mm</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>设定压力</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StandardStress}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StandardStress || 0}N</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>设定电流</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StandardCurrent}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StandardCurrent || 0}A</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>设定电阻</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StandardResistence}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StandardResistence || 0}Ω</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>扭矩转压力比例</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.TorqueToStressRate}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.TorqueToStressRate || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>步增计数</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StepCount}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StepCount || 0}</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>步增电流</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StepCurrent}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.StepCurrent || 0}A</Button>
                                 </Button.Group>
                                 <Button.Group style={{ width: '100%' }}>
                                     <Button className='ButtonLeft'>步增号</Button>
-                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.SteperNumber}</Button>
+                                    <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.SteperNumber || 0}</Button>
                                 </Button.Group>
                             </Grid.Column>
                         </Grid.Row>

@@ -41,7 +41,7 @@ let timer2 = {} //CellstateModal定时任务  10s
 let timer3 = {} //AlarmRecordTable定时任务 10s
 let timer4 = {} //AjaxCellSerialNoModal序列号查询定时任务 5s 10s 15s
 let timer5 = {}
-
+// let nbsp = &nbsp;
 // let Part_SerialOptions = [];
 let Part_NumberOptionsArray = [];
 let CellPass_NosOptionsArray = []
@@ -188,60 +188,62 @@ class Cell extends React.Component {
       let DropdownValue = obj.value;
       let size = 'fullscreen'
       switch (DropdownValue) {
-        case 'cell11':  //激光跟踪焊接单元  涂胶 Seal
+        case 'cell11':  //激光跟踪焊接单元  冲压 stamping
           ZDTsrc = 'http://172.16.29.15/ZDTWebPortal/RobotControllerDetails?controllerID=c962b37a-1ac0-eb2a-f1c7-8c6eb53a74b6&clusterName=LaserTracking&tabIndex=0&language=Chinese&ipAddress=192.168.2.2'
           CellNo = 16
           await this.setState({ size, open1: true });
           break;
         case 'cell12':
-          CellNo = 30
+          CellNo = 31
           // await this.setState({ size, open2: true });
-          await this.setState({ GluingCellStateModalSize: 'fullscreen', GluingCellStateModalOpen: true });
+          await this.setState({ StampingCellStateModalSize: 'fullscreen', StampingCellStateModalOpen: true });
           this.AjaxCellStateModal(CellNo)
           timer2 = setInterval(() => this.AjaxCellStateModal(CellNo), 10000);
           break;
-        case 'cell21': //碳钢焊接单元   弧焊 Arc
+        case 'cell21': //碳钢焊接单元  涂胶 Seal
           ZDTsrc = 'http://172.16.29.15/ZDTWebPortal/RobotControllerDetails?controllerID=c962b37a-1ac0-eb2a-f1c7-8c6eb5336a1e&clusterName=Smart%20ARC&tabIndex=0&language=Chinese&ipAddress=172.16.29.165'
           CellNo = 15
           await this.setState({ size, open1: true });
           break;
         case 'cell22':
-          CellNo = 14
-          await this.setState({ ArcWeldingCellStateModalSize: 'fullscreen', ArcWeldingCellStateModalOpen: true });
+          CellNo = 30
+          await this.setState({ GluingCellStateModalSize: 'fullscreen', GluingCellStateModalOpen: true });
           // await this.setState({ size, open2: true });
           this.AjaxCellStateModal(CellNo)
           timer2 = setInterval(() => this.AjaxCellStateModal(CellNo), 10000);
           break;
-        case 'cell31': //镀锌板焊接单元
+        case 'cell31': //镀锌板焊接单元   点焊 spot
           ZDTsrc = 'http://172.16.29.15/ZDTWebPortal/RobotControllerDetails?controllerID=c962b37a-1ac0-eb2a-f1c7-8c6eb53adeec&clusterName=Galvanized%20Plate%20Welding&tabIndex=0&language=Chinese&ipAddress=172.16.29.162'
           CellNo = 12
           await this.setState({ size, open1: true });
           break;
-        case 'cell32':
-          CellNo = 12
-          await this.setState({ size, open2: true });
+        case 'cell32': 
+          CellNo = 20
+          await this.setState({ SpotWeldingCellStateModalSize: 'fullscreen', SpotWeldingCellStateModalOpen: true });
           this.AjaxCellStateModal(CellNo)
           timer2 = setInterval(() => this.AjaxCellStateModal(CellNo), 10000);
           break;
-        case 'cell41': //不锈钢焊接单元  冲压 stamping
+        case 'cell41': //不锈钢焊接单元   弧焊 Arc
           ZDTsrc = 'http://172.16.29.15/ZDTWebPortal/RobotControllerDetails?controllerID=c962b37a-1ac0-eb2a-f1c7-8c6eb53adefc&clusterName=Stainless%20Steel%20Welding&tabIndex=0&language=Chinese&ipAddress=172.16.29.163'
           CellNo = 13
           await this.setState({ size, open1: true });
           break;
-        case 'cell42':
-          CellNo = 31
-          await this.setState({ StampingCellStateModalSize: 'fullscreen', StampingCellStateModalOpen: true });
+        case 'cell42':  
+          CellNo = 13
+          // await this.setState({ StampingCellStateModalSize: 'fullscreen', StampingCellStateModalOpen: true });
+          await this.setState({ ArcWeldingCellStateModalSize: 'fullscreen', ArcWeldingCellStateModalOpen: true });
           this.AjaxCellStateModal(CellNo)
           timer2 = setInterval(() => this.AjaxCellStateModal(CellNo), 10000);
           break;
-        case 'cell51': //铝合金焊接单元   打磨  sanding
+        case 'cell51': //铝合金焊接单元   弧焊 Arc 
           ZDTsrc = 'http://172.16.29.15/ZDTWebPortal/RobotControllerDetails?controllerID=c962b37a-1ac0-eb2a-f1c7-8c6eb53adefa&clusterName=Aluminium%20alloy%20Welding&tabIndex=0&language=Chinese&ipAddress=172.16.29.164'
           CellNo = 14
           await this.setState({ size, open1: true });
           break;
         case 'cell52':
-          CellNo = 27
-          await this.setState({ SandingCellStateModalSize: 'fullscreen', SandingCellStateModalOpen: true });
+          CellNo = 14
+          // await this.setState({ SandingCellStateModalSize: 'fullscreen', SandingCellStateModalOpen: true });
+          await this.setState({ ArcWeldingCellStateModalSize: 'fullscreen', ArcWeldingCellStateModalOpen: true });
           this.AjaxCellStateModal(CellNo)
           timer2 = setInterval(() => this.AjaxCellStateModal(CellNo), 10000);
           break;
@@ -591,18 +593,38 @@ class Cell extends React.Component {
     return (
       // style={{ boxShadow: '10px 10px 5px rgba(0,0,0,.3)' }}     style={{ borderRadius: '25px  0px 0px 25px', textShadow: '2px 2px 2px rgba(0,0,0,.3)' }}
       <div>
-        <Affix style={{ position: 'absolute', top: '79%', left: '10%' }}>
-          <Button.Group color={this.props.Cell1State} className='buttonGroup' >
-            <Dropdown text='涂胶工作站'   //激光跟踪焊接展示单元
-              search floating labeled button className='icon dropdownCell' options={cell1Options} onChange={this.handleClick.bind(this)} >
+        <Affix style={{ position: 'absolute', top: '29%', left: '79%' }}>
+          <Button.Group color={this.props.Cell1State} className='buttonGroup'>
+            <Dropdown text='直线七轴冲压'  //不锈钢焊接单元
+              search floating labeled button className='icon dropdownCell' options={cell1Options} color='red' onChange={this.handleClick.bind(this)} />
+            <Button style={{ backgroundColor: 'orange' }}>Press</Button>
+          </Button.Group>
+          <br />
+          <Form.Field style={{ display: this.props.HideLabel }}>
+            <Label basic pointing  className='animated bounceInDown CellLabel' >
+              {/*状态：{this.props.CellState[2].State === false ? '正常' : '故障'}<br />*/}
+              <p>当班产量：{this.props.Cell1Output || 0 + '件'}
+              <Badge status="success" text="计划完成率  98%" />
+              <Badge status="error" text="设备开动率 30%" /></p>
+              <Badge status="success" text="质量合格率 98%" />
+              <Badge status="warning" text="停机率 80%" />
+              <Badge status="success" text="安全生产98天" />
+            </Label>
+          </Form.Field>
+        </Affix>
+
+        <Affix style={{ position: 'absolute', top: '41%', left: '79%' }}>
+          <Button.Group color={this.props.Cell2State} className='buttonGroup' >
+            <Dropdown text='ISD 涂胶'  //激光跟踪焊接展示单元
+              search floating labeled button className='icon dropdownCell' options={cell2Options} onChange={this.handleClick.bind(this)} >
             </Dropdown>
             <Button style={{ backgroundColor: 'orange' }}>Seal</Button>
           </Button.Group>
           <br />
           <Form.Field style={{ display: this.props.HideLabel }}>
-            <Label basic color={this.props.Cell1State} pointing className='animated bounceInDown'>
-              <p>当班产量：{this.props.CellState[9].Output || 0 + '件'}<Badge status="success" text="计划完成率  90%" /></p>
-              <Badge status="error" text="设备开动率 30%" />
+            <Label basic  pointing className='animated bounceInDown CellLabel'>
+              <p>当班产量：{this.props.Cell2Output || 0 + '件'}<Badge status="success" text="计划完成率  90%" />
+                <Badge status="error" text="设备开动率 30%" /></p>
               <Badge status="success" text="质量合格率 98%" />
               <Badge status="warning" text="停机率 80%" />
               <Badge status="success" text="安全生产98天" />
@@ -610,18 +632,35 @@ class Cell extends React.Component {
           </Form.Field>
         </Affix>
 
-        <Affix style={{ position: 'absolute', top: '66%', left: '10%' }}>
-          <Button.Group color={this.props.Cell2State} className='buttonGroup'>
-            <Dropdown text='弧焊工作站' //碳钢焊接单元
-            search floating labeled button className='icon dropdownCell' options={cell2Options} color='red' onChange={this.handleClick.bind(this)} />
+        <Affix style={{ position: 'absolute', top: '53%', left: '79%' }}>
+          <Button.Group color={this.props.Cell3State} className='buttonGroup'>
+            <Dropdown text='柔性   点焊'  //智能焊接铣削打磨系统
+              search floating labeled button className='icon dropdownCell' options={cell3Options} color='red' onChange={this.handleClick.bind(this)} />
+            <Button style={{ backgroundColor: 'orange' }}>SPOT</Button>
+          </Button.Group>
+          <br />
+          <Form.Field style={{ display: this.props.HideLabel }}>
+            <Label basic  pointing className='animated bounceInDown CellLabel'>
+              <p>当班产量：{this.props.Cell3Output || 0 + '件'}<Badge status="success" text="计划完成率  98%" />
+                <Badge status="error" text="设备开动率 30%" /></p>
+              <Badge status="success" text="质量合格率 98%" />
+              <Badge status="warning" text="停机率 80%" />
+              <Badge status="success" text="安全生产98天" />
+            </Label>
+          </Form.Field>
+        </Affix>
+
+        <Affix style={{ position: 'absolute', top: '65%', left: '79%' }}>
+          <Button.Group color={this.props.Cell4State} className='buttonGroup'>
+            <Dropdown text='不锈钢 焊接' //碳钢焊接单元
+              search floating labeled button className='icon dropdownCell' options={cell4Options} color='red' onChange={this.handleClick.bind(this)} />
             <Button style={{ backgroundColor: 'orange' }}>ARC</Button>
           </Button.Group>
           <br />
           <Form.Field style={{ display: this.props.HideLabel }}>
-            <Label basic color={this.props.Cell2State} pointing className='animated bounceInDown'>
-              <p>当班产量：{this.props.CellState[8].Output || 0 + '件'}<Badge status="success" text="计划完成率  98%" /></p>
-
-              <Badge status="error" text="设备开动率 30%" />
+            <Label basic  pointing className='animated bounceInDown CellLabel'>
+              <p>当班产量：{this.props.Cell4Output || 0 + '件'}<Badge status="success" text="计划完成率  98%" />
+                <Badge status="error" text="设备开动率 30%" /></p>
               <Badge status="success" text="质量合格率 98%" />
               <Badge status="warning" text="停机率 80%" />
               <Badge status="success" text="安全生产98天" />
@@ -629,7 +668,25 @@ class Cell extends React.Component {
           </Form.Field>
         </Affix>
 
-{/*<Affix style={{ position: 'absolute', top: '32%', left: '10%' }}>
+        <Affix style={{ position: 'absolute', top: '77%', left: '79%' }}>
+          <Button.Group color={this.props.Cell5State} className='buttonGroup'>
+            <Dropdown text='铝合金 焊接' //碳钢焊接单元
+              search floating labeled button className='icon dropdownCell' options={cell5Options} color='red' onChange={this.handleClick.bind(this)} />
+            <Button style={{ backgroundColor: 'orange' }}>ARC</Button>
+          </Button.Group>
+          <br />
+          <Form.Field style={{ display: this.props.HideLabel }}>
+            <Label basic  pointing className='animated bounceInDown CellLabel'>
+              <p>当班产量：{this.props.Cell5Output || 0 + '件'}<Badge status="success" text="计划完成率  98%" />
+                <Badge status="error" text="设备开动率 30%" /></p>
+              <Badge status="success" text="质量合格率 98%" />
+              <Badge status="warning" text="停机率 80%" />
+              <Badge status="success" text="安全生产98天" />
+            </Label>
+          </Form.Field>
+        </Affix>
+
+        {/*<Affix style={{ position: 'absolute', top: '32%', left: '10%' }}>
           <Button.Group color={this.props.Cell3State} className='buttonGroup'>
             <Dropdown text='镀锌板焊接单元' 
             search floating labeled button className='icon dropdownCell' options={cell3Options} onChange={this.handleClick.bind(this)} />
@@ -649,26 +706,9 @@ class Cell extends React.Component {
           </Form.Field>
         </Affix>*/}
 
-        <Affix style={{ position: 'absolute', top: '44%', left: '10%' }}>
-          <Button.Group color={this.props.Cell4State} className='buttonGroup'>
-            <Dropdown text='冲压工作站'  //不锈钢焊接单元
-            search floating labeled button className='icon dropdownCell' options={cell4Options} color='red' onChange={this.handleClick.bind(this)} />
-            <Button style={{ backgroundColor: 'orange' }}>Press</Button>
-          </Button.Group>
-          <br />
-          <Form.Field style={{ display: this.props.HideLabel }}>
-            <Label basic color={this.props.Cell4State} pointing className='animated bounceInDown'>
-              {/*状态：{this.props.CellState[2].State === false ? '正常' : '故障'}<br />*/}
-              <p>当班产量：{this.props.CellState[6].Output || 0 + '件'}<Badge status="success" text="计划完成率  98%" /></p>
-              <Badge status="error" text="设备开动率 30%" />
-              <Badge status="success" text="质量合格率 98%" />
-              <Badge status="warning" text="停机率 80%" />
-              <Badge status="success" text="安全生产98天" />
-            </Label>
-          </Form.Field>
-        </Affix>
 
-        <Affix style={{ position: 'absolute', top: '55%', left: '10%' }}>
+
+        {/*<Affix style={{ position: 'absolute', top: '55%', left: '6%' }}>
           <Button.Group color={this.props.Cell5State} className='buttonGroup'>
             <Dropdown text='打磨工作站'  //铝合金焊接单元
             search floating labeled button className='icon dropdownCell' options={cell5Options} color='red' onChange={this.handleClick.bind(this)} />
@@ -677,7 +717,7 @@ class Cell extends React.Component {
           <br />
           <Form.Field style={{ display: this.props.HideLabel }}>
             <Label basic color={this.props.Cell5State} pointing className='animated bounceInDown'>
-              {/*状态：{this.props.CellState[2].State === false ? '正常' : '故障'}<br />*/}
+           
               <p>当班产量：{this.props.CellState[7].Output || 0 + '件'}<Badge status="success" text="计划完成率  98%" /></p>
               <Badge status="error" text="设备开动率 30%" />
               <Badge status="success" text="质量合格率 98%" />
@@ -685,28 +725,11 @@ class Cell extends React.Component {
               <Badge status="success" text="安全生产98天" />
             </Label>
           </Form.Field>
-        </Affix>
+        </Affix>*/}
 
 
 
-        <Affix style={{ position: 'absolute', top: '75%', right: '6%' }}>
-          <Button.Group color={this.props.Cell6State} className='buttonGroup'>
-            <Dropdown text='点焊工作站'  //智能焊接铣削打磨系统
-            search floating labeled button className='icon dropdownCell' options={cell6Options} color='red' onChange={this.handleClick.bind(this)} />
-            <Button style={{ backgroundColor: 'orange' }}>SPOT</Button>
-          </Button.Group>
-          <br />
-          <Form.Field style={{ display: this.props.HideLabel }}>
-            <Label basic color={this.props.Cell6State} pointing className='animated bounceInDown'>
-              {/*状态：{this.props.CellState[2].State === false ? '正常' : '故障'}<br />*/}
-              <p>当班产量：{this.props.CellState[10].Output || 0 + '件'}<Badge status="success" text="计划完成率  98%" /></p>
-              <Badge status="error" text="设备开动率 30%" />
-              <Badge status="success" text="质量合格率 98%" />
-              <Badge status="warning" text="停机率 80%" />
-              <Badge status="success" text="安全生产98天" />
-            </Label>
-          </Form.Field>
-        </Affix>
+
         {/*<Affix style={{ position: 'absolute', top: '20%', left: '10%' }} >
           <Button.Group color={this.props.Cell7State} className='buttonGroup'>
             <Dropdown text='汽车座椅焊接单元' search floating labeled button className='icon dropdownCell' options={cell7Options} onChange={this.handleClick.bind(this)} />

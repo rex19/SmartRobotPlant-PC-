@@ -130,7 +130,7 @@ export default class Sanding extends React.Component {
         }
     }
 
-    
+
 
     //无数据提示Modal 打开/关闭/AJAX
     NoDataModalShow = (size) => {
@@ -178,7 +178,7 @@ export default class Sanding extends React.Component {
                                 <Grid.Column>
                                     <Button.Group fluid>
                                         <Button>OEE</Button>
-                                        <Button positive>75%</Button>
+                                        <Button positive>89%</Button>
                                     </Button.Group>
                                 </Grid.Column>
                                 <Grid.Column>
@@ -270,12 +270,12 @@ export default class Sanding extends React.Component {
                             <Grid.Row className='GridRowClass2'>
                                 <Grid.Column width={11} className='GridColumnClass1'>
                                     <div style={{ overflowX: 'auto', overflowY: 'auto', height: '805px', width: '100%' }}>
-                                    <J1CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J1轴电流' />
-                                    <J2CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J2轴电流' />
-                                    <J3CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J3轴电流' />
-                                    <J4CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J4轴电流' />
-                                    <J5CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J5轴电流' />
-                                    <J6CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J6轴电流' />
+                                        <J1CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J1轴电流' />
+                                        <J2CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J2轴电流' />
+                                        <J3CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J3轴电流' />
+                                        <J4CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J4轴电流' />
+                                        <J5CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J5轴电流' />
+                                        <J6CurrentLineChart CellhandleSearchRes={this.state.handleSearchResFirst} title='J6轴电流' />
                                     </div>
                                 </Grid.Column>
                                 <Grid.Column width={4} className='GridColumnClass2'>
@@ -308,27 +308,27 @@ export default class Sanding extends React.Component {
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>J1电流允许值</Button>
-                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J1CurrentUSL}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J1CurrentLSL}</Button>
+                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J1CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J1CurrentLSL || 0}A</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>J2电流允许值</Button>
-                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J2CurrentUSL}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J2CurrentLSL}</Button>
+                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J2CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J2CurrentLSL || 0}A</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>J3电流允许值</Button>
-                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J3CurrentUSL}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J3CurrentLSL}</Button>
+                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J3CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J3CurrentLSL || 0}A</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>J4电流允许值</Button>
-                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J4CurrentUSL}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J4CurrentLSL}</Button>
+                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J4CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J4CurrentLSL || 0}A</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>J5电流允许值</Button>
-                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J5CurrentUSL}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J5CurrentLSL}</Button>
+                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J5CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J5CurrentLSL || 0}A</Button>
                                     </Button.Group>
                                     <Button.Group style={{ width: '100%' }}>
                                         <Button className='ButtonLeft'>J6电流允许值</Button>
-                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J6CurrentUSL}&nbsp;~&nbsp;{this.state.handleSearchResFirst.J6CurrentLSL}</Button>
+                                        <Button positive className='ButtonRight'>{this.state.handleSearchResFirst.J6CurrentUSL || 0}A&nbsp;~&nbsp;{this.state.handleSearchResFirst.J6CurrentLSL || 0}A</Button>
                                     </Button.Group>
                                 </Grid.Column>
                             </Grid.Row>

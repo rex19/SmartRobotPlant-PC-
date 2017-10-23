@@ -76,7 +76,7 @@ const PressureOfGluingLineChart = (props) => (
             },
             {
                 type: 'value',
-                name: 'MPa',
+                name: 'N',
                 show: true,
                 axisLine: {
                     lineStyle: {
@@ -112,7 +112,7 @@ const PressureOfGluingLineChart = (props) => (
                 },
                 position: 'right',
                 boundaryGap: ['450%', '450%'],
-                name: 'MPa',
+                name: 'N',
                 axisLabel: {
                     formatter: '{value}'
                 }
@@ -153,7 +153,7 @@ const PressureOfGluingLineChart = (props) => (
                     yAxisIndex: 1,
                     smooth: true,
                     // data: [10, 50, 60, 30, 50, 70, 10, 70, 20, 80],
-                    data: props.CellhandleSearchRes.RealTimeTemperature || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    data: props.CellhandleSearchRes.RealTimeTorque || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                     // data: data,
                     markPoint: {
                         data: [

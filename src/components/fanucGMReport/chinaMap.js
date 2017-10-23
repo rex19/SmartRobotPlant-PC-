@@ -11,6 +11,8 @@ var myChart = {}
 let TodayAllRobotsOutputs = 0, //所有产量
     TodayAllRobotsRunningRatio = 0, //所有Robot 开动率
     TodayAllPlantSafetyDays = 0, //安全生产天数
+    TodayAllRobotsPlanRate = 0, //计划完成率
+    TodayAllQuanlityRate = 0, //质量合格率
     //饼图
     TodayAllRobotsStateDistribution = {},
     TodayAllRobotsAlarmsDistribution = [{ 'Ratio': '0', 'AlarmCode': '0' }, { 'Ratio': '0', 'AlarmCode': '0' }, { 'Ratio': '0', 'AlarmCode': '0' }, { 'Ratio': '0', 'AlarmCode': '0' }],
@@ -251,7 +253,8 @@ class ChinaMap extends React.Component {
                 }
             },
             tooltip: {
-                trigger: 'item'
+                trigger: 'item',
+                show: false
             },
             grid: {
                 right: 40,
@@ -327,39 +330,10 @@ class ChinaMap extends React.Component {
         if (province == '重庆') {
             console.log('重庆')
             TodayAllRobotsOutputs = 9000,
-                TodayAllRobotsRunningRatio = 85.5,
-                TodayAllPlantSafetyDays = 108
-
-
-            TodayAllRobotsStateDistribution = {
-                "Date": "2017-05-19T18:03:05.6015113+08:00",
-                "RunningtRatio": 65.5,
-                "PowerOffRatio": 10,
-                "FaultRatio": 17.5,
-                "ReadyRatio": 7
-            },
-                TodayAllRobotsAlarmsDistribution = [
-                    { value: 10.5, name: 'ACode1' },
-                    { value: 30, name: 'ACode2' },
-                    { value: 50, name: 'ACode3' },
-                    { value: 9.5, name: 'ACode4' },
-                ],
-                TodayAllRobotsOutputsByPart = [
-                    { value: 0.5, name: 'PN1' },
-                    { value: 25, name: 'PN2' },
-                    { value: 35, name: 'PN3' },
-                    { value: 39.5, name: 'PN4' },
-
-                ],
-                TodayAllRobotsRunningRatioPieChart = {
-                    "Date": "2017-05-19T00:00:00+08:00",
-                    "RunningRatio": 55.5,
-                    "StopRatio": 40.1
-                },
-
-                TodayAllRobotsOutputPerHour = [53.0, 57.9, 0, 59.0, 55.2, 57.5, 0, 56.6, 52.7, 55.6, 52.2, 52.6, 57.7, 55.6, 55.2, 55.6, 56.7, 55.6, 52.2],
-                TodayAllRobotsxSevenDaysAllRobotsOutputs = [70.0, 77.9, 0, 79.0, 75.2, 77.5, 0, 76.6, 72.7, 75.6, 72.2, 72.6, 77.7, 75.6, 75.2, 75.6, 86.7, 95.6, 92.2],
-                TodayTodayAllRobotsStopInMinutesPerHour = [80.0, 77.9, 0, 69.0, 65.2, 67.5, 0, 66.6, 62.7, 65.6, 62.2, 92.6, 97.7, 95.6, 95.2, 95.6, 86.7, 95.6, 92.2],
+                TodayAllRobotsRunningRatio = 91.5,
+                TodayAllPlantSafetyDays = 263,
+                TodayAllRobotsPlanRate = 86.8, //计划完成率
+                TodayAllQuanlityRate = 98.7, //质量合格率
 
                 PlanRate3Years = [99.0, 99.9, 99.0, 0, 0, 0, 0, 0, 0, 0, 0],
                 PlanRate3Mouths = [0, 0, 0, 0, 99.2, 99.3, 99.6, 0, 0, 0, 0],
@@ -376,38 +350,9 @@ class ChinaMap extends React.Component {
             console.log('广州')
             TodayAllRobotsOutputs = 10000,
                 TodayAllRobotsRunningRatio = 90.5,
-                TodayAllPlantSafetyDays = 108
-
-
-            TodayAllRobotsStateDistribution = {
-                "Date": "2017-05-19T18:03:05.6015113+08:00",
-                "RunningtRatio": 65.5,
-                "PowerOffRatio": 10,
-                "FaultRatio": 17.5,
-                "ReadyRatio": 7
-            },
-                TodayAllRobotsAlarmsDistribution = [
-                    { value: 10.5, name: 'ACode1' },
-                    { value: 30, name: 'ACode2' },
-                    { value: 50, name: 'ACode3' },
-                    { value: 9.5, name: 'ACode4' },
-                ],
-                TodayAllRobotsOutputsByPart = [
-                    { value: 0.5, name: 'PN1' },
-                    { value: 25, name: 'PN2' },
-                    { value: 35, name: 'PN3' },
-                    { value: 39.5, name: 'PN4' },
-
-                ],
-                TodayAllRobotsRunningRatioPieChart = {
-                    "Date": "2017-05-19T00:00:00+08:00",
-                    "RunningRatio": 55.5,
-                    "StopRatio": 40.1
-                },
-
-                TodayAllRobotsOutputPerHour = [53.0, 57.9, 0, 59.0, 55.2, 57.5, 0, 56.6, 52.7, 55.6, 52.2, 52.6, 57.7, 55.6, 55.2, 55.6, 56.7, 55.6, 52.2],
-                TodayAllRobotsxSevenDaysAllRobotsOutputs = [70.0, 77.9, 0, 79.0, 75.2, 77.5, 0, 76.6, 72.7, 75.6, 72.2, 72.6, 77.7, 75.6, 75.2, 75.6, 86.7, 95.6, 92.2],
-                TodayTodayAllRobotsStopInMinutesPerHour = [80.0, 77.9, 0, 69.0, 65.2, 67.5, 0, 66.6, 62.7, 65.6, 62.2, 92.6, 97.7, 95.6, 95.2, 95.6, 86.7, 95.6, 92.2],
+                TodayAllPlantSafetyDays = 263,
+                TodayAllRobotsPlanRate = 96.8, //计划完成率
+                TodayAllQuanlityRate = 99.7, //质量合格率
 
                 PlanRate3Years = [89.0, 91.9, 98.0, 0, 0, 0, 0, 0, 0, 0, 0],
                 PlanRate3Mouths = [0, 0, 0, 0, 92.2, 96.3, 99.6, 0, 0, 0, 0],
@@ -424,39 +369,10 @@ class ChinaMap extends React.Component {
         } else if (province == '上海') {
             console.log('上海')
             TodayAllRobotsOutputs = 19000,
-                TodayAllRobotsRunningRatio = 76.5,
-                TodayAllPlantSafetyDays = 108
-
-
-            TodayAllRobotsStateDistribution = {
-                "Date": "2017-05-19T18:03:05.6015113+08:00",
-                "RunningtRatio": 65.5,
-                "PowerOffRatio": 10,
-                "FaultRatio": 17.5,
-                "ReadyRatio": 7
-            },
-                TodayAllRobotsAlarmsDistribution = [
-                    { value: 10.5, name: 'ACode1' },
-                    { value: 30, name: 'ACode2' },
-                    { value: 50, name: 'ACode3' },
-                    { value: 9.5, name: 'ACode4' },
-                ],
-                TodayAllRobotsOutputsByPart = [
-                    { value: 0.5, name: 'PN1' },
-                    { value: 25, name: 'PN2' },
-                    { value: 35, name: 'PN3' },
-                    { value: 39.5, name: 'PN4' },
-
-                ],
-                TodayAllRobotsRunningRatioPieChart = {
-                    "Date": "2017-05-19T00:00:00+08:00",
-                    "RunningRatio": 55.5,
-                    "StopRatio": 40.1
-                },
-
-                TodayAllRobotsOutputPerHour = [53.0, 57.9, 0, 59.0, 55.2, 57.5, 0, 56.6, 52.7, 55.6, 52.2, 52.6, 57.7, 55.6, 55.2, 55.6, 56.7, 55.6, 52.2],
-                TodayAllRobotsxSevenDaysAllRobotsOutputs = [70.0, 77.9, 0, 79.0, 75.2, 77.5, 0, 76.6, 72.7, 75.6, 72.2, 72.6, 77.7, 75.6, 75.2, 75.6, 86.7, 95.6, 92.2],
-                TodayTodayAllRobotsStopInMinutesPerHour = [80.0, 77.9, 0, 69.0, 65.2, 67.5, 0, 66.6, 62.7, 65.6, 62.2, 92.6, 97.7, 95.6, 95.2, 95.6, 86.7, 95.6, 92.2],
+                TodayAllRobotsRunningRatio = 96.5,
+                TodayAllPlantSafetyDays = 263,
+                TodayAllRobotsPlanRate = 90.8, //计划完成率
+                TodayAllQuanlityRate = 98.9, //质量合格率
 
                 PlanRate3Years = [79.0, 99.9, 99.0, 0, 0, 0, 0, 0, 0, 0, 0],
                 PlanRate3Mouths = [0, 0, 0, 0, 99.2, 99.3, 99.6, 0, 0, 0, 0],
@@ -472,37 +388,11 @@ class ChinaMap extends React.Component {
 
         } else {
             console.log('其他省份')
-            TodayAllRobotsOutputs = 1200,
-                TodayAllRobotsRunningRatio = 55.5,
-                TodayAllPlantSafetyDays = 159
-            TodayAllRobotsStateDistribution = {
-                "Date": "2017-05-19T18:03:05.6015113+08:00",
-                "RunningtRatio": 15.5,
-                "PowerOffRatio": 10,
-                "FaultRatio": 47.5,
-                "ReadyRatio": 17
-            },
-                TodayAllRobotsAlarmsDistribution = [
-                    { value: 10, name: 'ACode1' },
-                    { value: 1.5, name: 'ACode2' },
-                    { value: 0.5, name: 'ACode3' },
-                    { value: 79, name: 'ACode4' },
-                ],
-                TodayAllRobotsOutputsByPart = [
-                    { value: 50, name: 'ACode1' },
-                    { value: 30.5, name: 'ACode2' },
-                    { value: 0.5, name: 'ACode3' },
-                    { value: 19, name: 'ACode4' },
-
-                ],
-                TodayAllRobotsRunningRatioPieChart = {
-                    "Date": "2017-05-19T00:00:00+08:00",
-                    "RunningRatio": 95.5,
-                    "StopRatio": 4.5
-                },
-                TodayAllRobotsOutputPerHour = [97.0, 97.9, 0, 99.0, 95.2, 97.5, 0, 96.6, 92.7, 95.6, 92.2, 96.6, 90.7, 99.6, 95.2, 95.6, 86.7, 95.6, 92.2],
-                TodayAllRobotsxSevenDaysAllRobotsOutputs = [90.0, 97.9, 0, 99.0, 95.2, 97.5, 0, 96.6, 92.7, 96.6, 90.7, 99.6, 97.7, 95.6, 95.2, 95.6, 86.7, 95.6, 92.2],
-                TodayTodayAllRobotsStopInMinutesPerHour = [90.0, 97.9, 0, 99.0, 95.2, 97.5, 0, 96.6, 92.7, 95.6, 92.2, 92.6, 97.7, 95.6, 95.2, 95.6, 96.6, 90.7, 99.6],
+            TodayAllRobotsOutputs = 12000,
+                TodayAllRobotsRunningRatio = 95.5,
+                TodayAllPlantSafetyDays = 263,
+                TodayAllRobotsPlanRate = 97.1, //计划完成率
+                TodayAllQuanlityRate = 99.9, //质量合格率 TodayAllPlantSafetyDays = 159
 
                 PlanRate3Years = [85.0, 86.9, 84.0, 0, 0, 0, 0, 0, 0, 0, 0],
                 PlanRate3Mouths = [0, 0, 0, 0, 88.2, 86.3, 78.6, 0, 0, 0, 0],
@@ -519,13 +409,11 @@ class ChinaMap extends React.Component {
         }
 
         // 赋值后传给父组件  再由父组件传给其他子组件
-        this.props.transferMsg('end', TodayAllRobotsOutputs, TodayAllRobotsRunningRatio, TodayAllPlantSafetyDays,
-            TodayAllRobotsStateDistribution, TodayAllRobotsAlarmsDistribution, TodayAllRobotsOutputsByPart, TodayAllRobotsRunningRatioPieChart,
-            TodayAllRobotsOutputPerHour, TodayAllRobotsxSevenDaysAllRobotsOutputs, TodayTodayAllRobotsStopInMinutesPerHour, PlanRate3Years, PlanRate3Mouths, PlanRate3Weeks, QuanlityRate3Years, QuanlityRate3Mouths, QuanlityRate3Weeks, ComprehensiveEfficiency3Years, ComprehensiveEfficiency3Mouths, ComprehensiveEfficiency3Weeks
+        this.props.transferMsg('end', TodayAllRobotsOutputs, TodayAllRobotsRunningRatio, TodayAllPlantSafetyDays, TodayAllRobotsPlanRate, TodayAllQuanlityRate,
+            PlanRate3Years, PlanRate3Mouths, PlanRate3Weeks, QuanlityRate3Years, QuanlityRate3Mouths, QuanlityRate3Weeks, ComprehensiveEfficiency3Years, ComprehensiveEfficiency3Mouths, ComprehensiveEfficiency3Weeks
         )
 
     }
-
 
     render() {
 

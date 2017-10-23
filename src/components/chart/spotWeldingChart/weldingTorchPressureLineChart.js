@@ -78,7 +78,7 @@ const WeldingTorchPressureLineChart = (props) => (
             },
             {
                 type: 'value',
-                name: 'MPa',
+                name: 'N',
                 show: true,
                 axisLine: {
                     lineStyle: {
@@ -114,7 +114,7 @@ const WeldingTorchPressureLineChart = (props) => (
                 },
                 position: 'right',
                 boundaryGap: ['450%', '450%'],
-                name: 'MPa',
+                name: 'N',
                 axisLabel: {
                     formatter: '{value} '
                 }
