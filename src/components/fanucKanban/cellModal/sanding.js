@@ -185,7 +185,7 @@ export default class Sanding extends React.Component {
                                     <Button onClick={this.SandingAlermRecordModalShow('fullscreen', this.props.CellNo)} fluid>机器人报警信息</Button>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button onClick={this.SandingChartsModalShow('fullscreen', this.props.CellNo)} fluid>实时焊接数据</Button>
+                                    <Button onClick={this.SandingChartsModalShow('fullscreen', this.props.CellNo)} fluid>实时工艺数据</Button>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Button.Group fluid>
