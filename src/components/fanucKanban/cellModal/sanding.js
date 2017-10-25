@@ -263,7 +263,7 @@ export default class Sanding extends React.Component {
                 {/*SandingChartsModal  */}
                 <Modal size={size} open={SandingChartsModalOpen} onClose={this.SandingChartsModalClose} closeIcon='close' basic>
                     <Modal.Header className='ModalContentClass'>
-                        打磨实时数据
+                        打磨实时工艺数据
                      </Modal.Header>
                     <Modal.Content className='ModalContentClass'>
                         <Grid>

@@ -597,7 +597,7 @@ class Cell extends React.Component {
           <Button.Group color={this.props.Cell1State} className='buttonGroup'>
             <Dropdown text='直线七轴冲压'  //不锈钢焊接单元
               search floating labeled button className='icon dropdownCell' options={cell1Options} color='red' onChange={this.handleClick.bind(this)} />
-            <Button style={{ backgroundColor: 'orange' }}>Press</Button>
+            <Button style={{ backgroundColor: 'orange' }}>冲压</Button>
           </Button.Group>
           <br />
           <Form.Field style={{ display: this.props.HideLabel }}>
@@ -618,7 +618,7 @@ class Cell extends React.Component {
             <Dropdown text='ISD 涂胶'  //激光跟踪焊接展示单元
               search floating labeled button className='icon dropdownCell' options={cell2Options} onChange={this.handleClick.bind(this)} >
             </Dropdown>
-            <Button style={{ backgroundColor: 'orange' }}>Seal</Button>
+            <Button style={{ backgroundColor: 'orange' }}>涂胶</Button>
           </Button.Group>
           <br />
           <Form.Field style={{ display: this.props.HideLabel }}>
@@ -636,7 +636,7 @@ class Cell extends React.Component {
           <Button.Group color={this.props.Cell3State} className='buttonGroup'>
             <Dropdown text='柔性   点焊'  //智能焊接铣削打磨系统
               search floating labeled button className='icon dropdownCell' options={cell3Options} color='red' onChange={this.handleClick.bind(this)} />
-            <Button style={{ backgroundColor: 'orange' }}>SPOT</Button>
+            <Button style={{ backgroundColor: 'orange' }}>点焊</Button>
           </Button.Group>
           <br />
           <Form.Field style={{ display: this.props.HideLabel }}>
@@ -654,7 +654,7 @@ class Cell extends React.Component {
           <Button.Group color={this.props.Cell4State} className='buttonGroup'>
             <Dropdown text='不锈钢 焊接' //碳钢焊接单元
               search floating labeled button className='icon dropdownCell' options={cell4Options} color='red' onChange={this.handleClick.bind(this)} />
-            <Button style={{ backgroundColor: 'orange' }}>ARC</Button>
+            <Button style={{ backgroundColor: 'orange' }}>弧焊</Button>
           </Button.Group>
           <br />
           <Form.Field style={{ display: this.props.HideLabel }}>
@@ -672,7 +672,7 @@ class Cell extends React.Component {
           <Button.Group color={this.props.Cell5State} className='buttonGroup'>
             <Dropdown text='铝合金 焊接' //碳钢焊接单元
               search floating labeled button className='icon dropdownCell' options={cell5Options} color='red' onChange={this.handleClick.bind(this)} />
-            <Button style={{ backgroundColor: 'orange' }}>ARC</Button>
+            <Button style={{ backgroundColor: 'orange' }}>弧焊</Button>
           </Button.Group>
           <br />
           <Form.Field style={{ display: this.props.HideLabel }}>

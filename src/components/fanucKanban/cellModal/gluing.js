@@ -214,7 +214,7 @@ export default class Gluing extends React.Component {
                                     <Button onClick={this.GluingAlermRecordModalShow('fullscreen', this.props.CellNo)} fluid>机器人报警信息</Button>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button onClick={this.GluingChartsModalShow('fullscreen', this.props.CellNo)} fluid>实时涂胶数据</Button>
+                                    <Button onClick={this.GluingChartsModalShow('fullscreen', this.props.CellNo)} fluid>实时工艺数据</Button>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Button.Group fluid>
@@ -292,7 +292,7 @@ export default class Gluing extends React.Component {
                 {/*GluingChartsModal  */}
                 <Modal size={size} open={GluingChartsModalOpen} onClose={this.GluingChartsModalClose} closeIcon='close' basic>
                     <Modal.Header className='ModalContentClass'>
-                        涂胶实时数据
+                        涂胶实时工艺数据
                      </Modal.Header>
                     <Modal.Content className='ModalContentClass'>
                         <Grid>

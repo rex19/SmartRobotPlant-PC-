@@ -1,15 +1,15 @@
 // import React from 'react';
 import axios from 'axios';
 
-// 发布环境
-const port = 7001
-const ip = 'dsm.smart-flow.cn'
-const api = 'FANUC/api'
-
-// // 开发环境
-// const port = 80
-// const ip = '172.16.29.188'
+// // 发布环境
+// const port = 7001
+// const ip = 'dsm.smart-flow.cn'
 // const api = 'FANUC/api'
+
+// 开发环境
+const port = 80
+const ip = '172.16.29.188'
+const api = 'FANUC/api'
 
 // // 开发环境
 // const port = 80

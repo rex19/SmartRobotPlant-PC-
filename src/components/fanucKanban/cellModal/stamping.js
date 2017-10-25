@@ -263,7 +263,7 @@ export default class Stamping extends React.Component {
                 {/*StampingChartsModal  */}
                 <Modal size={size} open={StampingChartsModalOpen} onClose={this.StampingChartsModalClose} closeIcon='close' basic>
                     <Modal.Header className='ModalContentClass'>
-                        冲压实时数据
+                        冲压实时工艺数据
                      </Modal.Header>
                     <Modal.Content className='ModalContentClass'>
                         <Grid>

@@ -214,7 +214,7 @@ export default class SpotWelding extends React.Component {
                                     <Button onClick={this.SpotWeldingAlermRecordModalShow('fullscreen', this.props.CellNo)} fluid>机器人报警信息</Button>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button onClick={this.SpotWeldingChartsModalShow('fullscreen', this.props.CellNo)} fluid>实时焊接数据</Button>
+                                    <Button onClick={this.SpotWeldingChartsModalShow('fullscreen', this.props.CellNo)} fluid>实时工艺数据</Button>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Button.Group fluid>
@@ -292,7 +292,7 @@ export default class SpotWelding extends React.Component {
                 {/*SpotWeldingChartsModal  */}
                 <Modal size={size} open={SpotWeldingChartsModalOpen} onClose={this.SpotWeldingChartsModalClose} closeIcon='close' basic>
                     <Modal.Header className='ModalContentClass'>
-                        点焊实时数据
+                        点焊实时工艺数据
                      </Modal.Header>
                     <Modal.Content className='ModalContentClass'>
                         <Grid>

@@ -215,7 +215,7 @@ export default class ArcWelding extends React.Component {
                                     <Button onClick={this.ArcWeldingAlermRecordModalShow('fullscreen', this.props.CellNo)} fluid>机器人报警信息</Button>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Button onClick={this.ArcWeldingChartsModalShow('fullscreen', this.props.CellNo)} fluid>实时焊接数据</Button>
+                                    <Button onClick={this.ArcWeldingChartsModalShow('fullscreen', this.props.CellNo)} fluid>实时工艺数据</Button>
                                 </Grid.Column>
                                 <Grid.Column>
                                     <Button.Group fluid>
@@ -293,7 +293,7 @@ export default class ArcWelding extends React.Component {
                 {/*ArcWeldingChartsModal  */}
                 <Modal size={size} open={ArcWeldingChartsModalOpen} onClose={this.ArcWeldingChartsModalClose} closeIcon='close' basic>
                     <Modal.Header className='ModalContentClass'>
-                        弧焊实时数据
+                        弧焊实时工艺数据
                      </Modal.Header>
                     <Modal.Content className='ModalContentClass'>
                         <Grid>
