@@ -1,282 +1,180 @@
 
-
-import React, { Component } from 'react';
-
-// 引入 ECharts 主模块
-import echarts from 'echarts/lib/echarts';
-// 引入柱状图
-import 'echarts/lib/chart/line';
-// 引入提示框和标题组件
-import 'echarts/lib/component/tooltip';
-import 'echarts/lib/component/title';
+import React from 'react';
+import ReactEcharts from 'echarts-for-react';
 
 
-class CurrentLineChart extends Component {
 
-    componentDidUpdate(prevProps, prevState) {
-        var myChart = echarts.init(document.getElementById('CurrentLineChart'));
-        if (this.props.CellhandleSearchRes.Part_Serial !== "") {
-
-            // 基于准备好的dom，初始化echarts实例
-
-            // 绘制图表
-            myChart.setOption({
-                title: {
-                    text: 'Current'
-                },
-                tooltip: {
-                    trigger: 'axis'
-                },
-                toolbox: {
-                    feature: {
-                        dataView: { show: true, readOnly: false },
-                        magicType: { show: true, type: ['line', 'bar'] },
-                        restore: { show: true },
-                        saveAsImage: { show: true }
-                    }
-                },
-                legend: {
-                    data: ['Current']
-                },
-                xAxis: [
-                    {
-                        type: 'category',
-                        show: true,
-                        // data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-                        data: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Current_TimePoint || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-                    }
-                ],
-                yAxis: [{
-                    type: 'value',
-                    // name: 'anpei',
-                    // min: 0,
-                    // max: 25,
-                    boundaryGap: ['20%', '20%'],
-                    position: 'left',
-                    axisLabel: {
-                        formatter: '{value} A'
-                    }
-                },
-                {
-                    type: 'value',
-                    name: 'Ampere',
-                    show: true,
-                    position: 'left',
-                    boundaryGap: ['20%', '20%'],
-                    // min: 0,
-                    // max: 30000,
-                    axisLabel: {
-                        formatter: '{value} A'
-                    }
-                }, {
-                    type: 'value',
-                    show: false,
-                    position: 'right',
-                    boundaryGap: ['20%', '20%'],
-                    name: 'Ampere',
-                    axisLabel: {
-                        formatter: '{value} A'
-                    }
-                }
-                ],
-                visualMap: {
-                    bottom: 20,
-                    right: 0,
-                    pieces: [{
-                        gt: 0,
-                        lte: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_LSL || 0,
-                        color: '#ffde33'
-                    }, {
-                        gt: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_LSL || 0,
-                        lte: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_AVGLine || 0,
-                        color: '#096'
-                    }, {
-                        gt: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_AVGLine || 0,
-                        lte: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_USL || 0,
-                        color: '#096'
-                    }, {
-                        gt: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_USL || 0,
-                        // lte: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_MaxLine,
-                        color: '#cc0033'
-                    }],
-                    outOfRange: {
-                        color: '#999'
-                    }
-                },
-                dataZoom: [{
-                    type: 'inside',
-                    start: 0,
-                    end: 100
-                }],
-                series: [
-                    {
-                        name: 'Current',
-                        type: 'line',
-                        yAxisIndex: 1,
-                        data: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Data_Current || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                        // data: data,
-                        markPoint: {
-                            data: [
-                                { type: 'max', name: 'Max', symbol: 'diamond' },
-                                { type: 'min', name: 'Min', symbol: 'arrow' }
-                            ]
-                        },
-                        // markLine: {
-                        //     data: [{ type: 'average', name: '平均值' }]
-                        // },
-                        markLine: {
-                            silent: true,
-                            data: [{
-                                yAxis: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_LSL.toFixed(1) || 0
-                            }, {
-                                yAxis: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_AVGLine.toFixed(1) || 0,
-                            }, {
-                                yAxis: this.props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_USL.toFixed(1) || 0,
-                            }]
-                        }
-                    }]
-            });
-        } else {
-            myChart.clear();
+const CurrentLineChart = (props) => (
+  <ReactEcharts
+    option={{
+      title: {
+        text: props.title,
+        textStyle: {
+          color: 'rgba(12, 218, 255, 0.8)'
         }
-    }
-
-
-    componentDidMount() {
-
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('CurrentLineChart'));
-        // 绘制图表
-        myChart.setOption({
-            title: {
-                text: 'Current'
-            },
-            tooltip: {
-                trigger: 'axis'
-            },
-            toolbox: {
-                feature: {
-                    dataView: { show: true, readOnly: false },
-                    magicType: { show: true, type: ['line', 'bar'] },
-                    restore: { show: true },
-                    saveAsImage: { show: true }
-                }
-            },
-            // legend: {
-            //     data: ['标准电压', '电压']
-            // },
-            xAxis: [
-                {
-                    type: 'category',
-                    show: true,
-                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-                }
-            ],
-            yAxis: [{
-                type: 'value',
-                // name: 'anpei',
-                // min: 0,
-                // max: 25,
-                boundaryGap: ['20%', '20%'],
-                position: 'left',
-                axisLabel: {
-                    formatter: '{value} A'
-                }
-            },
-            {
-                type: 'value',
-                name: 'Ampere',
-                show: true,
-                position: 'left',
-                boundaryGap: ['20%', '20%'],
-                // min: 0,
-                // max: 30000,
-                axisLabel: {
-                    formatter: '{value} A'
-                }
-            }, {
-                type: 'value',
-                show: false,
-                position: 'right',
-                boundaryGap: ['20%', '20%'],
-                name: 'Ampere',
-                axisLabel: {
-                    formatter: '{value} A'
-                }
+      },
+      tooltip: {
+        trigger: 'axis'
+      },
+      toolbox: {
+        feature: {
+          dataView: { show: true, readOnly: false },
+          magicType: { show: true, type: ['line', 'bar'] },
+          restore: { show: true },
+          saveAsImage: { show: true }
+        }
+      },
+      legend: {
+        data: [{
+          name: '电流',
+          // 强制设置图形为圆。
+          icon: 'circle',
+          // 设置文本为红色
+          textStyle: {
+            color: 'red'
+          }
+        }]
+      },
+      xAxis: [
+        {
+          type: 'category',
+          axisLine: {
+            lineStyle: {
+              color: 'rgba(12, 218, 255, 0.8)'
             }
-            ],
-            visualMap: {
-                bottom: 20,
-                right: 0,
-                pieces: [{
-                    gt: 0,
-                    lte: 150,
-                    color: '#096'
-                }, {
-                    gt: 150,
-                    lte: 300,
-                    color: '#ffde33'
-                }, {
-                    gt: 300,
-                    lte: 450,
-                    color: '#ff9933'
-                }, {
-                    gt: 450,
-                    lte: 600,
-                    color: '#cc0033'
-                }, {
-                    gt: 600,
-                    color: '#7e0023'
-                }],
-                outOfRange: {
-                    color: '#999'
-                }
-            },
-            dataZoom: [{
-                type: 'inside',
-                start: 0,
-                end: 100
-            }],
-            series: [
-
-                {
-                    name: 'Current',
-                    type: 'line',
-                    yAxisIndex: 1,
-                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                    // data: data,
-                    markPoint: {
-                        data: [
-                            { type: 'max', name: 'Max', symbol: 'diamond' },
-                            { type: 'min', name: 'Min', symbol: 'arrow' }
-                        ]
-                    },
-                    markLine: {
-                        silent: true,
-                        data: [{
-                            yAxis: 0
-                        },
-                        {
-                            yAxis: 0
-                        }, {
-                            yAxis: 0
-                        }, {
-                            yAxis: 0
-                        }
-                        ]
-                    }
-                }]
-        });
-    }
-    render() {
-        return (
-            <div>
-                <div id="CurrentLineChart" style={{ width: '100%', height: '400px' }}></div>
-            </div>
-        );
-    }
-}
-
+          },
+          show: true,
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: 'rgba(12, 218, 255, 0.2)'
+            }
+          },
+          // data: [10, 50, 60, 30, 50, 70, 10, 70, 20, 80]
+          data: props.CellhandleSearchRes.Current_TimePoint || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        }
+      ],
+      yAxis: [{
+        type: 'value',
+        axisLine: {
+          lineStyle: {
+            color: 'rgba(12, 218, 255, 0.8)'
+          }
+        },
+        splitLine: {
+          show: true,
+          lineStyle: {
+            color: 'rgba(12, 218, 255, 0.2)'
+          }
+        },
+        // name: 'anpei',
+        // min: 0,
+        // max: 25,
+        boundaryGap: ['30%', '30%'],
+        position: 'left',
+        axisLabel: {
+          formatter: '{value} A'
+        }
+      },
+      {
+        type: 'value',
+        axisLine: {
+          lineStyle: {
+            color: 'rgba(12, 218, 255, 0.8)'
+          }
+        },
+        splitLine: {
+          show: true,
+          lineStyle: {
+            color: 'rgba(12, 218, 255, 0.2)'
+          }
+        },
+        name: 'A',
+        show: true,
+        position: 'left',
+        boundaryGap: ['30%', '30%'],
+        // min: 0,
+        // max: 30000,
+        axisLabel: {
+          formatter: '{value} A'
+        }
+      }, {
+        type: 'value',
+        axisLine: {
+          lineStyle: {
+            color: 'rgba(12, 218, 255, 0.8)'
+          }
+        },
+        show: false,
+        position: 'right',
+        boundaryGap: ['30%', '30%'],
+        name: 'A',
+        axisLabel: {
+          formatter: '{value} A'
+        }
+      }
+      ],
+      // visualMap: {
+      //     bottom: 20,
+      //     right: 0,
+      //     pieces: [{
+      //         gt: 0,
+      //         lte: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_LSL || 0,
+      //         color: '#ffde33'
+      //     }, {
+      //         gt: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_LSL || 0,
+      //         lte: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_AVGLine || 0,
+      //         color: '#096'
+      //     }, {
+      //         gt: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_AVGLine || 0,
+      //         lte: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_USL || 0,
+      //         color: '#096'
+      //     }, {
+      //         gt: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_USL || 0,
+      //         color: '#cc0033'
+      //     }],
+      //     outOfRange: {
+      //         color: '#999'
+      //     }
+      // },
+      dataZoom: [{
+        type: 'inside',
+        start: 0,
+        end: 100
+      }],
+      series: [
+        {
+          name: '电流',
+          type: 'line',
+          yAxisIndex: 1,
+          smooth: true,
+          data: props.CellhandleSearchRes.Data_Current || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          // data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          // data: [10, 50, 60, 30, 50, 70, 10, 70, 20, 80],
+          markPoint: {
+            data: [
+              { type: 'max', name: '最大值', symbol: 'diamond' },
+              { type: 'min', name: '最小值', symbol: 'arrow' }
+            ]
+          },
+          // markLine: {
+          //     silent: true,
+          //     data: [{
+          //         yAxis: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_LSL.toFixed(1) || 0
+          //     }, {
+          //         yAxis: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_AVGLine.toFixed(1) || 0,
+          //     }, {
+          //         yAxis: props.CellhandleSearchRes.OnePassMeasurementRecord.Standard_Current_USL.toFixed(1) || 0,
+          //     }
+          //     ]
+          // }
+        }]
+    }}
+    style={{ height: '350px', width: '100%' }}
+    className={'react_for_echarts'}
+  />
+);
 
 export default CurrentLineChart;
+
 

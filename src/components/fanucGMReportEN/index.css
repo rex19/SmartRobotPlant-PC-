@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  /* background-color: #404a59; */
+  background-color:rgba(0,0,0,0.9);
+
 }
 
 #chinaMap{
@@ -16,4 +19,15 @@ body {
   left: 5%;
   top:10%;
   z-index:999;
+}
+
+.footerRobotDayOutputBarChartClass{
+  border-width: 28px 27px;
+  border-style: solid;
+  border-image-source: url("../../img/borderImg.png");
+  border-image-slice: 32 37 fill;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  background: none;
 }

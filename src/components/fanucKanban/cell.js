@@ -257,7 +257,7 @@ class Cell extends React.Component {
 
         <Affix style={{ position: 'absolute', top: '41%', left: '79%' }}>
           <Button.Group color={this.props.Cell2State} className='buttonGroup' >
-            <Dropdown text='ISD 涂胶'  //激光跟踪焊接展示单元
+            <Dropdown text='ISD &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;涂胶'  //激光跟踪焊接展示单元
               search floating labeled button className='icon dropdownCell' options={cell2Options} onChange={this.handleClick.bind(this)} >
             </Dropdown>
             <Button style={{ backgroundColor: 'orange' }}>涂胶</Button>
@@ -276,7 +276,7 @@ class Cell extends React.Component {
 
         <Affix style={{ position: 'absolute', top: '53%', left: '79%' }}>
           <Button.Group color={this.props.Cell3State} className='buttonGroup'>
-            <Dropdown text='柔性   点焊'  //智能焊接铣削打磨系统
+            <Dropdown text='柔性&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;点焊'  //智能焊接铣削打磨系统
               search floating labeled button className='icon dropdownCell' options={cell3Options} color='red' onChange={this.handleClick.bind(this)} />
             <Button style={{ backgroundColor: 'orange' }}>点焊</Button>
           </Button.Group>
@@ -294,7 +294,7 @@ class Cell extends React.Component {
 
         <Affix style={{ position: 'absolute', top: '65%', left: '79%' }}>
           <Button.Group color={this.props.Cell4State} className='buttonGroup'>
-            <Dropdown text='不锈钢 焊接' //碳钢焊接单元
+            <Dropdown text='不锈钢&nbsp; &nbsp; &nbsp; &nbsp;焊接' //碳钢焊接单元
               search floating labeled button className='icon dropdownCell' options={cell4Options} color='red' onChange={this.handleClick.bind(this)} />
             <Button style={{ backgroundColor: 'orange' }}>弧焊</Button>
           </Button.Group>
@@ -312,7 +312,7 @@ class Cell extends React.Component {
 
         <Affix style={{ position: 'absolute', top: '77%', left: '79%' }}>
           <Button.Group color={this.props.Cell5State} className='buttonGroup'>
-            <Dropdown text='铝合金 焊接' //碳钢焊接单元
+            <Dropdown text='铝合金&nbsp; &nbsp; &nbsp;&nbsp;焊接' //碳钢焊接单元
               search floating labeled button className='icon dropdownCell' options={cell5Options} color='red' onChange={this.handleClick.bind(this)} />
             <Button style={{ backgroundColor: 'orange' }}>弧焊</Button>
           </Button.Group>

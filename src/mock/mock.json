@@ -1,0 +1,288 @@
+{
+  "RobotCurrentInfo": [
+    {
+      "RobotId": 1,
+      "Robot_YH_NO": "AR12580",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 3,
+      "Robot_YH_NO": "1938886   ",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 8,
+      "Robot_YH_NO": "AR12581",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 10,
+      "Robot_YH_NO": "AR12582",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 11,
+      "Robot_YH_NO": "AR27596",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 12,
+      "Robot_YH_NO": "AR25407",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 13,
+      "Robot_YH_NO": "AR25409",
+      "Output": 0,
+      "State": 2,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 14,
+      "Robot_YH_NO": "AR25408",
+      "Output": 0,
+      "State": 2,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 15,
+      "Robot_YH_NO": "AR25910",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 16,
+      "Robot_YH_NO": "AR68253",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 17,
+      "Robot_YH_NO": "AR11149",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 19,
+      "Robot_YH_NO": "SP12581",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 20,
+      "Robot_YH_NO": "SP27219",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 21,
+      "Robot_YH_NO": "SE12581",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 22,
+      "Robot_YH_NO": "SP88787",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 26,
+      "Robot_YH_NO": "PO12581",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 27,
+      "Robot_YH_NO": "PO15743",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 28,
+      "Robot_YH_NO": "PR88787",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 29,
+      "Robot_YH_NO": "SE12580",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 30,
+      "Robot_YH_NO": "SE16331",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 31,
+      "Robot_YH_NO": "PR15743",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    },
+    {
+      "RobotId": 32,
+      "Robot_YH_NO": "PR86565",
+      "Output": 0,
+      "State": 1,
+      "RunningRatio": 0
+    }
+  ],
+  "TodayAllRobotsOutputs": {
+    "Date": "2017-10-30T00:00:00+08:00",
+    "OutputsQuantity": 0
+  },
+  "TodayAllRobotsRunningRatio": {
+    "Date": "2017-10-30T00:00:00+08:00",
+    "RunningRatio": 0,
+    "StopRatio": 1
+  },
+  "PlantSafetyDays": {
+    "Today": "2017-10-30T00:00:00+08:00",
+    "LastIssueHappenedDay": "2017-07-22T14:56:31.3408775+08:00",
+    "TillNowTotalSafetyDays": 99
+  },
+  "CurrentFaultRobots": {
+    "FaultRobots": [
+      "AR25409",
+      "AR25408"
+    ]
+  },
+  /**    */
+  "TodayRobotOutputs": {
+    "Date": "2017-10-30T00:00:00+08:00",
+    "RobotID": "31",
+    "OutputsQuantity": 0
+  },
+  "TodayRobotStateDistribution": {
+    "RobotID": "31",
+    "Date": "0001-01-01T00:00:00",
+    "RunningtRatio": 0,
+    "PowerOffRatio": 1,
+    "FaultRatio": 0,
+    "ReadyRatio": 0
+  },
+  "TodayRobotRunningRatio": {
+    "Date": "2017-10-30T00:00:00+08:00",
+    "RobotID": "31",
+    "RunningRatio": 0,
+    "StopRatio": 1
+  },
+  "TodayRobotAlarmsDistribution": {
+    "Date": "2017-10-30T00:00:00+08:00",
+    "SlicesInfo": [
+      {
+        "AlarmCode": "",
+        "AlarmSeverity": null,
+        "Ratio": 0,
+        "Quantity": 0
+      }
+    ]
+  },
+  "TodayRobotOutputPerHour": {
+    "Date": "2017-10-30T15:04:10.3096456+08:00",
+    "SlicesInfo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "SevenDaysRobotOutputs": {
+    "XAxisTitle": [
+      "17-10-24",
+      "17-10-25",
+      "17-10-26",
+      "17-10-27",
+      "17-10-28",
+      "17-10-29",
+      "17-10-30"
+    ],
+    "Data": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "TodayRobotStopInMinutesPerHour": {
+    "Date": "2017-10-30T00:00:00+08:00",
+    "BarsInfo": [
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+  /**  */
+}

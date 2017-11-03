@@ -1,29 +1,20 @@
-/* @import 'animate.min.css'; */
+
 
 body {
 
   margin: 0;
   padding: 0;
-  /* font-family: sans-serif; */
-  /* background-image: url('../../img/fanucLayout.png') !important ; */
-  /* background-size:1920px 1080px !important;
-  background-attachment:fixed !important;
-  background-repeat:no-repeat !important; */
 }
 .divClass{
   position: relative;
   width:1920px;
   height: 1080px; 
   background-color: #080808;
-  /* background: red; */
-  /* background-image: url('../../img/fanucLayout.png') !important ; */
-  /* background-image: url('../../img/fanuc10Y.jpg') !important ; */
-  /* background-image: url('../../img/FANUCBackgroundDash.png') !important ; */
-  background-image: url('../../img/FANUCBackground.png') !important ;
-  /* background-size:1920px 1080px !important; */
-  background-size:94% 96% !important;
-  background-attachment:fixed !important;
-  background-repeat:no-repeat !important;
+  background-image: url('../../img/FANUCBackground.png')  ;
+  background-size:1762px 1035px  ;
+  /* background-size:94% 96% !important; */
+  background-attachment:fixed;
+  background-repeat:no-repeat;
 }
 
 .cellLabel{
@@ -45,11 +36,7 @@ body {
   width: 300px
 }
 .topTextTitleDiv .topTextTitle{
-  /* color: black; */
-  /* font-weight: bolder; */
-  /* font-size: 26px; */
   margin-left: 40%;
-  /* text-shadow: 2px 2px 2px rgba(0,0,0,.3); */
 
   font-family: "Arial", sans-serif;
   font-size: 45px;
@@ -72,9 +59,6 @@ body {
 .MenuSubDiv{
   width: 100%;
   height: 100%;
-  /* border: 1px solid #e6e6e6; */
-  /* border-radius: 10rem; */
-  /* background-color: rgba(239,190,118, .6) */
 }
 .MenuSubDiv .MenuSubDivLabelName{
   display: block;
