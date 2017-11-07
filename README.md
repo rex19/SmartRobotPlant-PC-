@@ -14,6 +14,10 @@ FANUC RobotPlant System On React
 ![](docs/demo1.png)
 ![](docs/demo2.png)
 ![](docs/demo3.png)
+![](docs/demo4.png)
+![](docs/demo5.png)
+![](docs/demo6.png)
+
 
 ## 技术栈参考链接：
 
